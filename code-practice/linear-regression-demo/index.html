@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overfitting & Linear Regression | ML Demo</title>
+  <meta name="description"
+    content="Minh hoạ tương tác về hồi quy tuyến tính - thêm điểm dữ liệu và xem đường hồi quy thay đổi theo thời gian thực." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="bg-grid"></div>
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">📈</span>
+        <span class="logo-text">Linear<span class="accent">Reg</span></span>
+      </div>
+      <nav class="header-nav">
+        <button class="nav-btn active" id="tab-interactive" onclick="switchTab('interactive')">Tương tác</button>
+        <button class="nav-btn" id="tab-overfitting" onclick="switchTab('overfitting')">🔥 Overfitting</button>
+        <button class="nav-btn" id="tab-theory" onclick="switchTab('theory')">Lý thuyết</button>
+        <button class="nav-btn" id="tab-gradient" onclick="switchTab('gradient')">Gradient Descent</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================== TAB: INTERACTIVE ===================== -->
+  <main class="tab-content active" id="tab-content-interactive">
+    <div class="hero">
+      <h1>Hồi Quy Tuyến Tính <span class="badge">Tương tác</span></h1>
+      <p class="hero-sub">Click vào biểu đồ để thêm điểm dữ liệu và xem đường hồi quy cập nhật theo thời gian thực.</p>
+    </div>
+
+    <div class="main-grid">
+      <!-- Canvas -->
+      <div class="card canvas-card">
+        <div class="card-header">
+          <span class="card-title">Biểu đồ dữ liệu</span>
+          <div class="canvas-tools">
+            <button class="tool-btn" id="btn-add" onclick="setMode('add')" title="Thêm điểm">➕ Thêm</button>
+            <button class="tool-btn" id="btn-remove" onclick="setMode('remove')" title="Xoá điểm">➖ Xoá</button>
+            <button class="tool-btn danger" onclick="clearPoints()">🗑 Xoá tất cả</button>
+          </div>
+        </div>
+        <div class="canvas-wrapper">
+          <canvas id="regCanvas" width="700" height="450"></canvas>
+          <div class="canvas-hint" id="canvasHint">👆 Click để thêm điểm dữ liệu</div>
+        </div>
+
+        <!-- Preset datasets -->
+        <div class="preset-row">
+          <span class="preset-label">Dữ liệu mẫu:</span>
+          <button class="preset-btn" onclick="loadPreset('linear')">📈 Tuyến tính</button>
+          <button class="preset-btn" onclick="loadPreset('noisy')">🌊 Nhiễu cao</button>
+          <button class="preset-btn" onclick="loadPreset('scattered')">💫 Phân tán</button>
+          <button class="preset-btn" onclick="loadPreset('salary')">💼 Lương – Kinh nghiệm</button>
+        </div>
+      </div>
+
+      <!-- Stats Panel -->
+      <div class="stats-column">
+        <!-- Equation Card -->
+        <div class="card eq-card">
+          <div class="card-title">Phương trình hồi quy</div>
+          <div class="equation" id="equation">
+            <span class="eq-y">ŷ</span> = <span class="eq-coeff" id="eqSlope">—</span> x + <span class="eq-coeff"
+              id="eqIntercept">—</span>
+          </div>
+          <div class="eq-note">ŷ: giá trị dự đoán &nbsp;|&nbsp; x: biến độc lập</div>
+        </div>
+
+        <!-- Metrics -->
+        <div class="card metrics-card">
+          <div class="card-title">Chỉ số đánh giá</div>
+          <div class="metrics-grid">
+            <div class="metric-item">
+              <div class="metric-label">R² Score</div>
+              <div class="metric-value" id="r2Score">—</div>
+              <div class="metric-bar">
+                <div class="metric-fill" id="r2Bar" style="width:0%"></div>
+              </div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-label">MSE</div>
+              <div class="metric-value" id="mseScore">—</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-label">MAE</div>
+              <div class="metric-value" id="maeScore">—</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-label">Số điểm (n)</div>
+              <div class="metric-value" id="nPoints">0</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Prediction -->
+        <div class="card pred-card">
+          <div class="card-title">Dự đoán</div>
+          <div class="pred-row">
+            <label>Nhập giá trị x:</label>
+            <input type="number" id="predX" placeholder="VD: 5.5" step="0.1" oninput="predict()" />
+          </div>
+          <div class="pred-result" id="predResult">
+            <span class="pred-eq">ŷ = ?</span>
+          </div>
+        </div>
+
+        <!-- Sliders (manual control) -->
+        <div class="card slider-card">
+          <div class="card-title">Điều chỉnh thủ công</div>
+          <div class="slider-group">
+            <label>Hệ số góc (slope) <span id="slopeVal">—</span></label>
+            <input type="range" id="slopeSlider" min="-5" max="5" step="0.01" oninput="manualUpdate()" />
+          </div>
+          <div class="slider-group">
+            <label>Hệ số chặn (intercept) <span id="interceptVal">—</span></label>
+            <input type="range" id="interceptSlider" min="-10" max="10" step="0.01" oninput="manualUpdate()" />
+          </div>
+          <button class="reset-btn" onclick="resetToOLS()">↩ Khôi phục OLS tối ưu</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Residual chart -->
+    <div class="card residual-card">
+      <div class="card-header">
+        <span class="card-title">Biểu đồ phần dư (Residuals)</span>
+        <span class="residual-hint">Phần dư = y thực tế − ŷ dự đoán</span>
+      </div>
+      <canvas id="residualCanvas" width="900" height="180"></canvas>
+    </div>
+  </main>
+
+  <!-- ===================== TAB: THEORY ===================== -->
+  <main class="tab-content" id="tab-content-theory">
+    <div class="hero">
+      <h1>Lý thuyết <span class="badge green">OLS</span></h1>
+      <p class="hero-sub">Tổng quan về hồi quy tuyến tính và phương pháp bình phương tối thiểu (OLS).</p>
+    </div>
+
+    <div class="theory-grid">
+      <div class="card theory-card">
+        <h2>📌 Mô hình hồi quy tuyến tính</h2>
+        <p>Hồi quy tuyến tính mô tả mối quan hệ <strong>tuyến tính</strong> giữa biến phụ thuộc <em>y</em> và biến độc
+          lập <em>x</em>:</p>
+        <div class="formula-box">
+          <div class="formula">y = β₀ + β₁·x + ε</div>
+        </div>
+        <ul class="theory-list">
+          <li><strong>β₀</strong> — Hệ số chặn (intercept): giá trị y khi x = 0</li>
+          <li><strong>β₁</strong> — Hệ số góc (slope): mức thay đổi của y khi x tăng 1 đơn vị</li>
+          <li><strong>ε</strong> — Sai số ngẫu nhiên (nhiễu)</li>
+        </ul>
+      </div>
+
+      <div class="card theory-card">
+        <h2>🎯 Phương pháp OLS</h2>
+        <p>OLS (Ordinary Least Squares) tìm β₀, β₁ <strong>tối thiểu hoá tổng bình phương phần dư</strong>:</p>
+        <div class="formula-box">
+          <div class="formula">min Σ(yᵢ − ŷᵢ)²</div>
+        </div>
+        <p>Nghiệm giải tích tường minh:</p>
+        <div class="formula-box">
+          <div class="formula">β₁ = Σ(xᵢ−x̄)(yᵢ−ȳ) / Σ(xᵢ−x̄)²</div>
+          <div class="formula small">β₀ = ȳ − β₁·x̄</div>
+        </div>
+      </div>
+
+      <div class="card theory-card">
+        <h2>📊 Chỉ số đánh giá</h2>
+        <div class="metrics-theory">
+          <div class="mt-item">
+            <div class="mt-title">R² (Hệ số xác định)</div>
+            <div class="formula-box">
+              <div class="formula small">R² = 1 − SS_res/SS_tot</div>
+            </div>
+            <p>R² ∈ [0,1]. Càng gần 1 mô hình càng khớp tốt.</p>
+          </div>
+          <div class="mt-item">
+            <div class="mt-title">MSE (Mean Squared Error)</div>
+            <div class="formula-box">
+              <div class="formula small">MSE = (1/n)·Σ(yᵢ−ŷᵢ)²</div>
+            </div>
+          </div>
+          <div class="mt-item">
+            <div class="mt-title">MAE (Mean Absolute Error)</div>
+            <div class="formula-box">
+              <div class="formula small">MAE = (1/n)·Σ|yᵢ−ŷᵢ|</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card theory-card">
+        <h2>⚠️ Giả định mô hình</h2>
+        <ul class="theory-list">
+          <li>✅ Quan hệ tuyến tính giữa X và Y</li>
+          <li>✅ Sai số có phân phối chuẩn</li>
+          <li>✅ Phương sai sai số đồng nhất (homoscedasticity)</li>
+          <li>✅ Các quan sát độc lập với nhau</li>
+          <li>✅ Không có đa cộng tuyến (đối với hồi quy bội)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Animated illustration -->
+    <div class="card anim-card">
+      <div class="card-title">Minh hoạ OLS — Tối thiểu hoá tổng diện tích hình vuông</div>
+      <canvas id="olsCanvas" width="850" height="300"></canvas>
+    </div>
+  </main>
+
+  <!-- ===================== TAB: GRADIENT DESCENT ===================== -->
+  <main class="tab-content" id="tab-content-gradient">
+    <div class="hero">
+      <h1>Gradient Descent <span class="badge purple">Animation</span></h1>
+      <p class="hero-sub">Xem thuật toán Gradient Descent học tham số β₀ và β₁ từng bước một.</p>
+    </div>
+
+    <div class="gd-grid">
+      <div class="card gd-canvas-card">
+        <div class="card-title">Quá trình học</div>
+        <canvas id="gdCanvas" width="600" height="400"></canvas>
+      </div>
+
+      <div class="gd-side">
+        <div class="card gd-control-card">
+          <div class="card-title">Cài đặt</div>
+          <div class="slider-group">
+            <label>Learning rate (α) = <span id="lrVal">0.01</span></label>
+            <input type="range" id="lrSlider" min="0.001" max="0.1" step="0.001" value="0.01" oninput="updateLR()" />
+          </div>
+          <div class="slider-group">
+            <label>Số epoch = <span id="epochVal">200</span></label>
+            <input type="range" id="epochSlider" min="50" max="1000" step="50" value="200" oninput="updateEpochs()" />
+          </div>
+          <div class="slider-group">
+            <label>Tốc độ hiển thị = <span id="speedVal">Chậm (300ms)</span></label>
+            <input type="range" id="speedSlider" min="30" max="1000" step="10" value="300" oninput="updateSpeed()" />
+          </div>
+          <div class="gd-btns">
+            <button class="tool-btn" id="gdRunBtn" onclick="runGD()">▶ Chạy</button>
+            <button class="tool-btn danger" onclick="resetGD()">↩ Reset</button>
+          </div>
+        </div>
+
+        <div class="card gd-params-card">
+          <div class="card-title">Tham số hiện tại</div>
+          <div class="gd-stat">
+            <span>β₀ (intercept)</span><span class="gd-val" id="gdB0">—</span>
+          </div>
+          <div class="gd-stat">
+            <span>β₁ (slope)</span><span class="gd-val" id="gdB1">—</span>
+          </div>
+          <div class="gd-stat">
+            <span>Loss (MSE)</span><span class="gd-val" id="gdLoss">—</span>
+          </div>
+          <div class="gd-stat">
+            <span>Epoch</span><span class="gd-val" id="gdEpoch">0</span>
+          </div>
+        </div>
+
+        <div class="card gd-loss-card">
+          <div class="card-title">Loss curve</div>
+          <canvas id="lossCanvas" width="320" height="180"></canvas>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===================== TAB: OVERFITTING ===================== -->
+  <main class="tab-content" id="tab-content-overfitting">
+    <div class="hero">
+      <h1>Overfitting <span class="badge red">Minh hoạ</span></h1>
+      <p class="hero-sub">Điều chỉnh bậc đa thức để quan sát hiện tượng Underfitting → Good Fit → Overfitting.</p>
+    </div>
+
+    <!-- Status Banner -->
+    <div class="of-banner-wrap">
+      <div class="of-banner" id="ofBanner">
+        <span class="of-banner-icon" id="ofBannerIcon">🎯</span>
+        <div>
+          <div class="of-banner-title" id="ofBannerTitle">Chọn bậc đa thức</div>
+          <div class="of-banner-sub" id="ofBannerSub">Dùng thanh trượt bên dưới để thay đổi độ phức tạp của mô hình
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="of-main-grid">
+      <!-- Left: Main chart -->
+      <div class="of-left">
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">Dữ liệu & đường fit</span>
+            <div style="display:flex;gap:8px;align-items:center;">
+              <span class="of-legend"><span class="of-dot train"></span> Train</span>
+              <span class="of-legend"><span class="of-dot test"></span> Test</span>
+              <button class="tool-btn" onclick="ofGenData()">🔄 Dữ liệu mới</button>
+            </div>
+          </div>
+          <div class="of-canvas-wrap">
+            <canvas id="ofCanvas" width="700" height="420"></canvas>
+          </div>
+
+          <!-- Degree slider -->
+          <div class="of-degree-control">
+            <div class="of-degree-label">
+              <span>Bậc đa thức (Degree)</span>
+              <span class="of-degree-badge" id="ofDegreeBadge">1</span>
+            </div>
+            <div class="of-degree-track">
+              <span class="of-track-label">Underfitting</span>
+              <input type="range" id="ofDegreeSlider" min="1" max="15" value="1" oninput="ofUpdateDegree()" />
+              <span class="of-track-label right">Overfitting</span>
+            </div>
+            <div class="of-degree-marks">
+              <span>1</span><span>3</span><span>5</span><span>7</span><span>9</span><span>11</span><span>13</span><span>15</span>
+            </div>
+          </div>
+
+          <!-- Noise control -->
+          <div class="of-noise-row">
+            <label>Mức nhiễu (Noise): <span id="ofNoiseVal">0.3</span></label>
+            <input type="range" id="ofNoiseSlider" min="0.05" max="1.0" step="0.05" value="0.3"
+              oninput="ofChangeNoise()" />
+            <label style="margin-left:16px;">Số điểm train: <span id="ofNTrainVal">20</span></label>
+            <input type="range" id="ofNTrainSlider" min="8" max="40" step="1" value="20" oninput="ofChangeNTrain()" />
+          </div>
+        </div>
+
+        <!-- Error curve card -->
+        <div class="card" style="margin-top:16px;">
+          <div class="card-header">
+            <span class="card-title">Bias–Variance Tradeoff</span>
+            <div style="display:flex;gap:12px;">
+              <span class="of-legend"><span class="of-dot train"></span> Train Error</span>
+              <span class="of-legend"><span class="of-dot test"></span> Test Error</span>
+            </div>
+          </div>
+          <canvas id="ofErrorCanvas" width="700" height="200"></canvas>
+        </div>
+      </div>
+
+      <!-- Right: Metrics panel -->
+      <div class="of-right">
+        <!-- Model info -->
+        <div class="card">
+          <div class="card-title" style="margin-bottom:14px;">Mô hình hiện tại</div>
+          <div class="of-model-formula" id="ofFormula">ŷ = ?</div>
+
+          <div class="of-metrics-list">
+            <div class="of-metric-row">
+              <div>
+                <div class="of-mname">📚 Train MSE</div>
+                <div class="of-msub">Lỗi trên tập huấn luyện</div>
+              </div>
+              <div class="of-mval" id="ofTrainMSE">—</div>
+            </div>
+            <div class="of-metric-row">
+              <div>
+                <div class="of-mname">🧪 Test MSE</div>
+                <div class="of-msub">Lỗi trên tập kiểm tra</div>
+              </div>
+              <div class="of-mval accent-red" id="ofTestMSE">—</div>
+            </div>
+            <div class="of-metric-row">
+              <div>
+                <div class="of-mname">📈 Train R²</div>
+                <div class="of-msub">Độ khớp tập train</div>
+              </div>
+              <div class="of-mval" id="ofTrainR2">—</div>
+            </div>
+            <div class="of-metric-row">
+              <div>
+                <div class="of-mname">📉 Test R²</div>
+                <div class="of-msub">Độ khớp tập test</div>
+              </div>
+              <div class="of-mval accent-red" id="ofTestR2">—</div>
+            </div>
+            <div class="of-metric-row">
+              <div>
+                <div class="of-mname">⚖️ Overfit Gap</div>
+                <div class="of-msub">Test MSE − Train MSE</div>
+              </div>
+              <div class="of-mval" id="ofGap">—</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Explanation card -->
+        <div class="card" style="margin-top:16px;">
+          <div class="card-title" style="margin-bottom:14px;">Giải thích</div>
+          <div class="of-explanation" id="ofExplanation">
+            <div class="of-exp-item">
+              <div class="of-exp-icon">📉</div>
+              <div>
+                <div class="of-exp-title">Underfitting (Bậc thấp)</div>
+                <div class="of-exp-desc">Mô hình quá đơn giản, không học được pattern trong dữ liệu. Train error và Test
+                  error đều cao.</div>
+              </div>
+            </div>
+            <div class="of-exp-item">
+              <div class="of-exp-icon">✅</div>
+              <div>
+                <div class="of-exp-title">Good Fit (Bậc vừa)</div>
+                <div class="of-exp-desc">Mô hình cân bằng bias–variance. Tổng quát hoá tốt trên dữ liệu mới.</div>
+              </div>
+            </div>
+            <div class="of-exp-item">
+              <div class="of-exp-icon">🔥</div>
+              <div>
+                <div class="of-exp-title">Overfitting (Bậc cao)</div>
+                <div class="of-exp-desc">Mô hình học thuộc nhiễu trong dữ liệu. Train error rất thấp nhưng Test error
+                  tăng cao.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Regularization note -->
+        <div class="card of-reg-card" style="margin-top:16px;">
+          <div class="card-title" style="margin-bottom:10px;">💡 Cách phòng tránh Overfitting</div>
+          <ul class="of-tips">
+            <li>🔢 Giảm độ phức tạp mô hình</li>
+            <li>📊 Thu thập thêm dữ liệu</li>
+            <li>🎲 Data augmentation</li>
+            <li>📐 Regularization (L1/L2)</li>
+            <li>🛑 Early stopping</li>
+            <li>🌳 Dropout (Neural Networks)</li>
+            <li>✂️ Cross-validation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

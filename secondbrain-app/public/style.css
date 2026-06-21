@@ -1,0 +1,133 @@
+:root {
+  --bg:#1a1b26; --panel:#24283b; --ink:#c0caf5; --muted:#565f89;
+  --accent:#7aa2f7; --green:#9ece6a; --yellow:#e0af68; --blue:#7dcfff; --gray:#414868; --red:#f7768e;
+}
+* { box-sizing:border-box; }
+/* [hidden] phải thắng các rule display:flex của modal (id-selector specificity cao hơn) */
+[hidden] { display:none !important; }
+body { margin:0; font-family:system-ui,Segoe UI,sans-serif; background:var(--bg); color:var(--ink); height:100vh; display:flex; flex-direction:column; }
+#topbar { display:flex; align-items:center; justify-content:space-between; padding:.5rem 1rem; background:var(--panel); border-bottom:1px solid var(--gray); }
+.brand { font-weight:600; }
+button, select { background:var(--gray); color:var(--ink); border:1px solid var(--muted); border-radius:6px; padding:.35rem .7rem; cursor:pointer; }
+button:hover { border-color:var(--accent); }
+main { flex:1; display:grid; grid-template-columns:var(--c1,300px) 7px 1fr 7px var(--c3,460px); min-height:0; }
+.resizer { background:transparent; cursor:col-resize; position:relative; z-index:6; }
+.resizer::before { content:""; position:absolute; inset:0 2px; background:var(--gray); opacity:.5; transition:opacity .15s, background .15s; }
+.resizer:hover::before, .resizer.dragging::before { opacity:1; background:var(--accent); }
+body.col-resizing { cursor:col-resize; user-select:none; }
+#sidebar { display:flex; flex-direction:column; min-height:0; border-right:1px solid var(--gray); }
+#sidebar-tools { padding:.5rem .5rem .4rem; border-bottom:1px solid var(--gray); background:var(--panel); }
+#search { width:100%; background:#16161e; color:var(--ink); border:1px solid var(--gray); border-radius:6px; padding:.4rem .6rem; font-size:.85rem; }
+#search:focus { outline:none; border-color:var(--accent); }
+#filters { display:flex; gap:.3rem; margin-top:.4rem; }
+.chip { flex:1; padding:.25rem 0; font-size:.8rem; border-radius:6px; background:var(--gray); border:1px solid transparent; }
+.chip.active { border-color:var(--accent); background:#2c3350; }
+#sidebar-list { flex:1; overflow-y:auto; padding:.5rem; }
+.no-match { color:var(--muted); padding:1rem; font-size:.85rem; text-align:center; }
+
+/* tiến độ tổng trên topbar */
+#overall { display:flex; align-items:center; gap:.5rem; flex:1; max-width:340px; margin:0 1rem; }
+.ov-bar { flex:1; height:7px; background:var(--gray); border-radius:4px; overflow:hidden; }
+.ov-bar > i { display:block; height:100%; width:0; background:linear-gradient(90deg,var(--green),var(--blue)); transition:width .4s ease; }
+#ov-label { font-size:.78rem; color:var(--muted); white-space:nowrap; }
+#graph { position:relative; border-right:1px solid var(--gray); min-height:0; overflow:hidden; background:
+  radial-gradient(circle at 1px 1px, rgba(86,95,137,.18) 1px, transparent 0) 0 0 / 22px 22px,
+  var(--bg); }
+#cy { position:absolute; inset:0; }
+#graph-toolbar { position:absolute; top:.6rem; left:.6rem; right:.6rem; z-index:5; display:flex; gap:.5rem; align-items:center; justify-content:space-between; pointer-events:none; }
+#graph-toolbar .seg, #graph-toolbar > button { pointer-events:auto; }
+#graph-toolbar .seg { display:flex; background:var(--panel); border:1px solid var(--gray); border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,.3); }
+#graph-toolbar .seg button { background:transparent; border:none; border-radius:0; padding:.4rem .7rem; font-size:.82rem; }
+#graph-toolbar .seg button.active { background:var(--accent); color:#1a1b26; font-weight:600; }
+#graph-toolbar #btn-fit { background:var(--panel); font-size:.82rem; box-shadow:0 2px 8px rgba(0,0,0,.3); }
+#graph-legend { position:absolute; left:.6rem; bottom:.6rem; z-index:5; background:rgba(36,40,59,.92); border:1px solid var(--gray); border-radius:8px; padding:.5rem .7rem; font-size:.72rem; line-height:1.7; backdrop-filter:blur(4px); box-shadow:0 2px 8px rgba(0,0,0,.3); }
+#graph-legend .lg-row { display:flex; align-items:center; gap:.45rem; color:var(--ink); }
+#graph-legend b { color:var(--muted); font-weight:600; text-transform:uppercase; font-size:.66rem; letter-spacing:.04em; }
+#graph-legend .lg-sep { margin-top:.3rem; padding-top:.3rem; border-top:1px solid var(--gray); }
+#graph-legend .dot { width:10px; height:10px; border-radius:50%; flex:0 0 auto; }
+#graph-legend .ln { width:18px; height:0; flex:0 0 auto; }
+#graph-legend .ln.solid { border-top:2.5px solid var(--accent); }
+#graph-legend .ln.dash { border-top:1.5px dashed var(--muted); }
+#pane { display:flex; flex-direction:column; min-height:0; }
+#pane-head { display:flex; align-items:center; justify-content:space-between; gap:.5rem; padding:.5rem 1rem; border-bottom:1px solid var(--gray); }
+#pane-head h2 { font-size:1rem; margin:0; }
+.pane-actions { display:flex; gap:.4rem; }
+#viewer { overflow-y:auto; padding:1rem 1.5rem; line-height:1.6; }
+#viewer h1 { font-size:1.4rem; } #viewer h2 { font-size:1.1rem; color:var(--accent); }
+#viewer table { border-collapse:collapse; } #viewer th, #viewer td { border:1px solid var(--gray); padding:.3rem .6rem; }
+#viewer code { background:#000; padding:.1rem .3rem; border-radius:4px; }
+#viewer pre { background:#16161e; padding:.8rem; border-radius:6px; overflow-x:auto; }
+#viewer pre code { background:none; }
+#viewer a.wikilink { color:var(--blue); cursor:pointer; text-decoration:none; border-bottom:1px dashed var(--blue); }
+#editor { flex:1; resize:none; background:#16161e; color:var(--ink); border:none; padding:1rem 1.5rem; font-family:ui-monospace,Consolas,monospace; font-size:.9rem; line-height:1.5; }
+#editor:focus { outline:none; }
+
+/* điều hướng Trước / Sau theo lộ trình */
+#note-nav { display:flex; align-items:center; justify-content:space-between; gap:.5rem; padding:.5rem 1rem; border-top:1px solid var(--gray); background:var(--panel); }
+.nav-btn { font-size:.85rem; }
+.nav-btn:disabled { opacity:.35; cursor:default; border-color:var(--muted); }
+#nav-pos { font-size:.75rem; color:var(--muted); }
+
+/* empty state */
+.empty-state { color:var(--muted); text-align:center; padding:3rem 1.5rem; }
+.empty-state .es-icon { font-size:2.5rem; opacity:.5; }
+.empty-state p { margin:.6rem 0; }
+.empty-state .es-tip { font-size:.82rem; }
+kbd { background:var(--gray); border:1px solid var(--muted); border-radius:4px; padding:.05rem .35rem; font-family:ui-monospace,monospace; font-size:.78rem; color:var(--ink); }
+
+/* công thức KaTeX cho vừa khung */
+#viewer .katex-display { overflow-x:auto; overflow-y:hidden; padding:.2rem 0; }
+.branch-group { margin-bottom:1rem; }
+.branch-group h3 { font-size:.8rem; color:var(--muted); margin:.5rem 0 .3rem; text-transform:uppercase; }
+.branch-bar { height:4px; background:var(--gray); border-radius:2px; overflow:hidden; margin-bottom:.4rem; }
+.branch-bar > i { display:block; height:100%; background:var(--green); }
+.note-item { display:flex; gap:.4rem; align-items:center; padding:.25rem .4rem; border-radius:5px; cursor:pointer; font-size:.85rem; }
+.note-item:hover { background:var(--gray); }
+.note-item.active { background:var(--accent); color:#1a1b26; }
+.note-item .ord { color:var(--muted); width:1.2rem; text-align:right; }
+.loading { color:var(--muted); padding:1rem; }
+.top-actions { display:flex; gap:.5rem; }
+
+/* ---- modal nhập slide ---- */
+#import-modal { position:fixed; inset:0; z-index:50; background:rgba(0,0,0,.55); display:flex; align-items:center; justify-content:center; }
+.modal-box { width:min(880px,94vw); max-height:90vh; display:flex; flex-direction:column; background:var(--bg); border:1px solid var(--gray); border-radius:12px; box-shadow:0 12px 40px rgba(0,0,0,.5); }
+.modal-head { display:flex; align-items:center; justify-content:space-between; padding:.7rem 1rem; border-bottom:1px solid var(--gray); }
+.modal-head h2 { font-size:1rem; margin:0; }
+#import-close { background:transparent; border:none; font-size:1.1rem; }
+#import-body { overflow-y:auto; padding:1rem; display:flex; flex-direction:column; gap:.8rem; }
+.modal-foot { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.7rem 1rem; border-top:1px solid var(--gray); }
+#import-status { color:var(--muted); font-size:.85rem; }
+.import-hint { color:var(--muted); text-align:center; padding:2rem 1rem; }
+.import-spin { text-align:center; padding:2.5rem 1rem; color:var(--accent); }
+
+.note-card { border:1px solid var(--gray); border-radius:9px; padding:.7rem; background:var(--panel); }
+.note-card.off { opacity:.45; }
+.note-card .nc-head { display:flex; align-items:center; gap:.5rem; margin-bottom:.5rem; }
+.note-card .nc-head input[type=checkbox] { width:16px; height:16px; }
+.note-card .nc-slug { flex:1; font-family:ui-monospace,Consolas,monospace; }
+.note-card .nc-branch { width:42px; text-align:center; }
+.note-card .nc-order { width:56px; }
+.note-card .nc-grid { display:grid; grid-template-columns:1fr 1fr; gap:.4rem; margin-bottom:.4rem; }
+.note-card label { display:block; font-size:.7rem; color:var(--muted); margin-bottom:.15rem; }
+.note-card input, .note-card textarea { width:100%; background:#16161e; color:var(--ink); border:1px solid var(--gray); border-radius:5px; padding:.35rem .5rem; font-size:.82rem; }
+.note-card textarea { resize:vertical; min-height:90px; font-family:ui-monospace,Consolas,monospace; line-height:1.45; }
+.note-card .nc-full { grid-column:1 / -1; }
+
+/* ---- toast ---- */
+#toasts { position:fixed; bottom:1rem; right:1rem; z-index:100; display:flex; flex-direction:column; gap:.5rem; align-items:flex-end; }
+.toast { background:var(--panel); border:1px solid var(--gray); border-left:3px solid var(--accent); border-radius:8px; padding:.55rem .9rem; font-size:.85rem; box-shadow:0 4px 16px rgba(0,0,0,.45); animation:toast-in .2s ease; max-width:320px; }
+.toast.ok { border-left-color:var(--green); }
+.toast.err { border-left-color:var(--red,#f7768e); }
+.toast.fade { opacity:0; transition:opacity .3s ease; }
+@keyframes toast-in { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }
+
+/* ---- prompt modal (note mới) ---- */
+#prompt-modal { position:fixed; inset:0; z-index:60; background:rgba(0,0,0,.55); display:flex; align-items:center; justify-content:center; }
+.prompt-box { width:min(440px,92vw); }
+.prompt-body { padding:1rem; display:flex; flex-direction:column; gap:.4rem; }
+.prompt-body label { font-size:.8rem; color:var(--muted); }
+#prompt-input { background:#16161e; color:var(--ink); border:1px solid var(--gray); border-radius:6px; padding:.5rem .6rem; font-size:.95rem; }
+#prompt-input:focus { outline:none; border-color:var(--accent); }
+.prompt-slug { color:var(--muted); font-family:ui-monospace,monospace; font-size:.78rem; min-height:1rem; }
+button.primary { background:var(--accent); color:#1a1b26; border-color:var(--accent); font-weight:600; }
+#prompt-close { background:transparent; border:none; font-size:1.1rem; }

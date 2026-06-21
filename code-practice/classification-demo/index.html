@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phân loại: Logistic & Softmax | ML Demo</title>
+  <meta name="description"
+    content="Minh hoạ tương tác phân loại — click thêm điểm, xem ranh giới quyết định của Logistic (nhị phân) và Softmax (đa lớp) học theo thời gian thực." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="bg-grid"></div>
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">🎯</span>
+        <span class="logo-text">Classi<span class="accent">fy</span></span>
+      </div>
+      <nav class="header-nav">
+        <button class="nav-btn active" id="tab-logistic" onclick="switchTab('logistic')">Logistic (2 lớp)</button>
+        <button class="nav-btn" id="tab-softmax" onclick="switchTab('softmax')">🌈 Softmax (đa lớp)</button>
+        <button class="nav-btn" id="tab-theory" onclick="switchTab('theory')">Lý thuyết</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============== TAB: LOGISTIC NHỊ PHÂN ============== -->
+  <main class="tab-content active" id="tab-content-logistic">
+    <div class="hero">
+      <h1>Hồi Quy Logistic <span class="badge cyan">Nhị phân</span></h1>
+      <p class="hero-sub">Click vào biểu đồ để thêm điểm. Mô hình học ranh giới (sigmoid → xác suất → ngưỡng) theo thời
+        gian thực.</p>
+    </div>
+
+    <div class="main-grid">
+      <!-- Canvas -->
+      <div class="card canvas-card">
+        <div class="card-header">
+          <span class="card-title">Không gian đặc trưng (x₁, x₂)</span>
+          <div class="canvas-tools">
+            <button class="tool-btn" id="lg-remove" onclick="LG.toggleRemove()" title="Xoá điểm">➖ Xoá</button>
+            <button class="tool-btn danger" onclick="LG.clear()">🗑 Xoá tất cả</button>
+          </div>
+        </div>
+        <div class="canvas-wrapper">
+          <canvas id="lgCanvas" class="plot" width="700" height="460"></canvas>
+          <div class="canvas-hint" id="lgHint">👆 Click để thêm điểm — màu nền = xác suất P(lớp 1)</div>
+        </div>
+
+        <div class="chip-row">
+          <span class="chip-label">Thêm điểm thuộc:</span>
+          <span class="chip c0 active" id="lg-chip0" onclick="LG.setClass(0)"><span class="dot" style="background:var(--c0)"></span>Lớp 0</span>
+          <span class="chip c1" id="lg-chip1" onclick="LG.setClass(1)"><span class="dot" style="background:var(--c1)"></span>Lớp 1</span>
+        </div>
+
+        <div class="preset-row">
+          <span class="preset-label">Dữ liệu mẫu:</span>
+          <button class="preset-btn" onclick="LG.preset('blobs')">🟢 2 cụm tách rõ</button>
+          <button class="preset-btn" onclick="LG.preset('overlap')">🌫 Chồng lấn</button>
+          <button class="preset-btn" onclick="LG.preset('xor')">✖ XOR (logistic bó tay)</button>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-column">
+        <div class="card eq-card">
+          <div class="card-title">Mô hình</div>
+          <div class="equation">z = <span class="eq-coeff" id="lg-w1">—</span>·x₁ + <span class="eq-coeff" id="lg-w2">—</span>·x₂ + <span class="eq-coeff" id="lg-b">—</span></div>
+          <div class="eq-note">P(lớp 1) = σ(z) = 1 / (1 + e<sup>−z</sup>)</div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Ngưỡng & Huấn luyện</div>
+          <div class="slider-group">
+            <label>Ngưỡng quyết định = <span class="slider-val" id="lg-thrVal">0.50</span></label>
+            <input type="range" id="lg-thr" min="0.05" max="0.95" step="0.01" value="0.5" oninput="LG.onThreshold()" />
+          </div>
+          <div class="slider-group">
+            <label>Learning rate α = <span class="slider-val" id="lg-lrVal">0.50</span></label>
+            <input type="range" id="lg-lr" min="0.05" max="2" step="0.05" value="0.5" oninput="LG.onLR()" />
+          </div>
+          <div class="btn-row">
+            <button class="tool-btn" id="lg-runBtn" onclick="LG.animate()">▶ Xem học (animation)</button>
+          </div>
+          <div class="eq-note" id="lg-trainInfo" style="margin-top:10px;">epoch 0 · loss —</div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Độ đo (tại ngưỡng hiện tại)</div>
+          <div class="metrics-grid">
+            <div class="metric-item">
+              <div class="metric-label">Accuracy</div>
+              <div class="metric-value" id="lg-acc">—</div>
+              <div class="metric-bar"><div class="metric-fill" id="lg-accBar" style="width:0%"></div></div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-label">F1-Score</div>
+              <div class="metric-value" id="lg-f1">—</div>
+              <div class="metric-bar"><div class="metric-fill" id="lg-f1Bar" style="width:0%"></div></div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-label">Precision</div>
+              <div class="metric-value" id="lg-prec">—</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-label">Recall</div>
+              <div class="metric-value" id="lg-rec">—</div>
+            </div>
+          </div>
+
+          <div class="conf-wrap">
+            <div class="conf-matrix">
+              <div class="conf-cell conf-head"></div>
+              <div class="conf-cell conf-head">Đoán 1</div>
+              <div class="conf-cell conf-head">Đoán 0</div>
+              <div class="conf-cell conf-head" style="writing-mode:vertical-rl;transform:rotate(180deg);">Thật 1</div>
+              <div class="conf-cell conf-tp"><div class="conf-big" id="lg-TP">0</div><div class="conf-sub">TP</div></div>
+              <div class="conf-cell conf-fn"><div class="conf-big" id="lg-FN">0</div><div class="conf-sub">FN</div></div>
+              <div class="conf-cell conf-head" style="writing-mode:vertical-rl;transform:rotate(180deg);">Thật 0</div>
+              <div class="conf-cell conf-fp"><div class="conf-big" id="lg-FP">0</div><div class="conf-sub">FP</div></div>
+              <div class="conf-cell conf-tn"><div class="conf-big" id="lg-TN">0</div><div class="conf-sub">TN</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ============== TAB: SOFTMAX ĐA LỚP ============== -->
+  <main class="tab-content" id="tab-content-softmax">
+    <div class="hero">
+      <h1>Softmax <span class="badge green">Đa lớp</span></h1>
+      <p class="hero-sub">Phân loại K lớp. Mỗi điểm gán cho lớp có xác suất cao nhất → mặt phẳng chia thành các vùng
+        quyết định.</p>
+    </div>
+
+    <div class="main-grid">
+      <div class="card canvas-card">
+        <div class="card-header">
+          <span class="card-title">Không gian đặc trưng (x₁, x₂)</span>
+          <div class="canvas-tools">
+            <button class="tool-btn" id="sm-remove" onclick="SM.toggleRemove()">➖ Xoá</button>
+            <button class="tool-btn danger" onclick="SM.clear()">🗑 Xoá tất cả</button>
+          </div>
+        </div>
+        <div class="canvas-wrapper">
+          <canvas id="smCanvas" class="plot" width="700" height="460"></canvas>
+          <div class="canvas-hint" id="smHint">👆 Click để thêm điểm — nền tô theo vùng quyết định (argmax)</div>
+        </div>
+
+        <div class="chip-row" id="sm-chips">
+          <span class="chip-label">Thêm điểm thuộc:</span>
+          <!-- chips sinh bằng JS -->
+        </div>
+
+        <div class="preset-row">
+          <span class="preset-label">Số lớp K:</span>
+          <button class="preset-btn" onclick="SM.setK(2)">2</button>
+          <button class="preset-btn" onclick="SM.setK(3)">3</button>
+          <button class="preset-btn" onclick="SM.setK(4)">4</button>
+          <span class="preset-label" style="margin-left:10px;">Mẫu:</span>
+          <button class="preset-btn" onclick="SM.preset()">🎲 Sinh cụm</button>
+        </div>
+      </div>
+
+      <div class="stats-column">
+        <div class="card">
+          <div class="card-title">Huấn luyện (Softmax + Cross-Entropy)</div>
+          <div class="slider-group">
+            <label>Learning rate α = <span class="slider-val" id="sm-lrVal">0.50</span></label>
+            <input type="range" id="sm-lr" min="0.05" max="2" step="0.05" value="0.5" oninput="SM.onLR()" />
+          </div>
+          <div class="btn-row">
+            <button class="tool-btn" id="sm-runBtn" onclick="SM.animate()">▶ Xem học (animation)</button>
+          </div>
+          <div class="eq-note" id="sm-trainInfo" style="margin-top:10px;">epoch 0 · loss —</div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Độ chính xác</div>
+          <div class="metrics-grid">
+            <div class="metric-item">
+              <div class="metric-label">Accuracy</div>
+              <div class="metric-value" id="sm-acc">—</div>
+              <div class="metric-bar"><div class="metric-fill" id="sm-accBar" style="width:0%"></div></div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-label">Macro F1</div>
+              <div class="metric-value" id="sm-f1">—</div>
+              <div class="metric-bar"><div class="metric-fill" id="sm-f1Bar" style="width:0%"></div></div>
+            </div>
+          </div>
+          <table class="cls-table" id="sm-table">
+            <thead>
+              <tr><th>Lớp</th><th>Precision</th><th>Recall</th><th>F1</th><th>n</th></tr>
+            </thead>
+            <tbody><!-- sinh bằng JS --></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ============== TAB: LÝ THUYẾT ============== -->
+  <main class="tab-content" id="tab-content-theory">
+    <div class="hero">
+      <h1>Lý thuyết <span class="badge">Logistic & Softmax</span></h1>
+      <p class="hero-sub">Tóm tắt công thức nền tảng — khớp với 2 notebook tự cài.</p>
+    </div>
+
+    <div class="theory-grid">
+      <div class="card theory-card">
+        <h2>📐 Sigmoid (nhị phân)</h2>
+        <p>Tính tổ hợp tuyến tính rồi ép về xác suất trong (0,1):</p>
+        <div class="formula-box">
+          <div class="formula">z = w·x + b</div>
+          <div class="formula small">σ(z) = 1 / (1 + e<sup>−z</sup>)</div>
+        </div>
+        <p>Cắt ngưỡng (mặc định 0.5) → nhãn 0/1. Ranh giới quyết định là <strong>đường thẳng</strong> (nơi z = 0).</p>
+      </div>
+
+      <div class="card theory-card">
+        <h2>🌈 Softmax (đa lớp)</h2>
+        <p>Chuẩn hoá K logit thành K xác suất cộng lại bằng 1:</p>
+        <div class="formula-box">
+          <div class="formula">σ(z)ᵢ = e<sup>zᵢ</sup> / Σⱼ e<sup>zⱼ</sup></div>
+        </div>
+        <p>Chọn lớp có xác suất cao nhất (argmax). Khi K = 2, softmax <strong>suy biến về sigmoid</strong>.</p>
+      </div>
+
+      <div class="card theory-card">
+        <h2>📉 Hàm mất mát — Cross-Entropy</h2>
+        <div class="formula-box">
+          <div class="formula small">Nhị phân: L = −[y·log(h) + (1−y)·log(1−h)]</div>
+          <div class="formula small">Đa lớp: L = −Σ onehot(y)·log(S)</div>
+        </div>
+        <p>Dùng Log Loss (không phải MSE) vì mặt chi phí <strong>LỒI</strong> → một cực tiểu toàn cục, luôn hội tụ.</p>
+      </div>
+
+      <div class="card theory-card">
+        <h2>🔄 Gradient (rất gọn)</h2>
+        <div class="formula-box">
+          <div class="formula small">∂L/∂w = (σ(z) − y)·x</div>
+          <div class="formula small">cập nhật: w := w − α·(σ(z) − y)·x</div>
+        </div>
+        <ul class="theory-list">
+          <li><strong>σ(z) − y</strong>: sai số (xác suất dự đoán − nhãn thật)</li>
+          <li><strong>α</strong>: learning rate — bước cập nhật</li>
+          <li>Dạng giống hệt hồi quy tuyến tính, chỉ khác h là sigmoid/softmax</li>
+        </ul>
+      </div>
+
+      <div class="card theory-card">
+        <h2>🎚️ Ngưỡng & đánh đổi</h2>
+        <ul class="theory-list">
+          <li><strong>Hạ ngưỡng</strong> → bắt nhiều dương hơn → Recall ↑, Precision ↓</li>
+          <li><strong>Nâng ngưỡng</strong> → thận trọng hơn → Precision ↑, Recall ↓</li>
+          <li>Kéo thanh <em>Ngưỡng</em> ở tab Logistic để thấy 4 ô confusion matrix đổi theo</li>
+        </ul>
+      </div>
+
+      <div class="card theory-card">
+        <h2>⚠️ Giới hạn tuyến tính</h2>
+        <p>Cả logistic và softmax vẽ ranh giới <strong>tuyến tính</strong>. Thử preset <strong>XOR</strong> ở tab Logistic
+          → mô hình <em>bó tay</em> vì 2 lớp không tách được bằng một đường thẳng.</p>
+        <p>Giải pháp: tạo đặc trưng phi tuyến (feature engineering) hoặc dùng cây / mạng nơ-ron.</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

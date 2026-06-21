@@ -1,0 +1,2 @@
+# Learning rate => lúc đầu để lớn sau đó đùn decay để giảm sau 1 số bước
+decay

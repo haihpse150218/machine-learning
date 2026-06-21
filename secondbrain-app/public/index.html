@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🧠 Second Brain — ML</title>
+  <link rel="stylesheet" href="vendor/katex/katex.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header id="topbar">
+    <span class="brand">🧠 Second Brain — ML</span>
+    <div id="overall" title="Tiến độ tổng">
+      <div class="ov-bar"><i id="ov-fill"></i></div>
+      <span id="ov-label">…</span>
+    </div>
+    <div class="top-actions">
+      <button id="btn-import">📄 Nhập slide</button>
+      <button id="btn-new">＋ Note mới</button>
+    </div>
+  </header>
+  <input id="import-file" type="file" accept="application/pdf,.pdf" hidden />
+  <main>
+    <aside id="sidebar">
+      <div id="sidebar-tools">
+        <input id="search" type="search" placeholder="🔍 Tìm note…  ( / )" autocomplete="off" />
+        <div id="filters">
+          <button class="chip active" data-status="all">Tất cả</button>
+          <button class="chip" data-status="⬜">⬜</button>
+          <button class="chip" data-status="🟡">🟡</button>
+          <button class="chip" data-status="✅">✅</button>
+          <button class="chip" data-status="🔁">🔁</button>
+        </div>
+      </div>
+      <div id="sidebar-list"><div class="loading">Đang tải…</div></div>
+    </aside>
+    <div class="resizer" data-resize="left" title="Kéo để chỉnh rộng"></div>
+    <section id="graph">
+      <div id="graph-toolbar">
+        <div class="seg">
+          <button data-mode="path" class="active">🧭 Lộ trình</button>
+          <button data-mode="web">🕸️ Mạng lưới</button>
+        </div>
+        <button id="btn-fit" title="Vừa khung">⤢ Vừa khung</button>
+      </div>
+      <div id="cy"></div>
+      <div id="graph-legend">
+        <div class="lg-row"><b>Trạng thái</b></div>
+        <div class="lg-row"><span class="dot" style="background:#565f89"></span>Chưa học</div>
+        <div class="lg-row"><span class="dot" style="background:#e0af68"></span>Đang học</div>
+        <div class="lg-row"><span class="dot" style="background:#9ece6a"></span>Đã nắm</div>
+        <div class="lg-row"><span class="dot" style="background:#7dcfff"></span>Cần ôn</div>
+        <div class="lg-row lg-sep"><span class="ln solid"></span>thứ tự đọc</div>
+        <div class="lg-row"><span class="ln dash"></span>liên kết</div>
+      </div>
+    </section>
+    <div class="resizer" data-resize="right" title="Kéo để chỉnh rộng"></div>
+    <section id="pane">
+      <div id="pane-head">
+        <h2 id="note-title">Chọn một note</h2>
+        <div class="pane-actions">
+          <select id="status-select" title="Trạng thái">
+            <option value="⬜">⬜ Chưa học</option>
+            <option value="🟡">🟡 Đang học</option>
+            <option value="✅">✅ Đã nắm</option>
+            <option value="🔁">🔁 Cần ôn</option>
+          </select>
+          <button id="btn-edit">✏️ Sửa</button>
+          <button id="btn-save" hidden>💾 Lưu</button>
+        </div>
+      </div>
+      <article id="viewer"><div class="empty-state">
+        <div class="es-icon">🧠</div>
+        <p>Chọn một note ở cột trái để bắt đầu học.</p>
+        <p class="es-tip">Mẹo: dùng <kbd>←</kbd> <kbd>→</kbd> để chuyển note theo lộ trình, <kbd>/</kbd> để tìm, <kbd>E</kbd> để sửa.</p>
+      </div></article>
+      <textarea id="editor" hidden spellcheck="false"></textarea>
+      <nav id="note-nav" hidden>
+        <button id="nav-prev" class="nav-btn">‹ Trước</button>
+        <span id="nav-pos"></span>
+        <button id="nav-next" class="nav-btn">Sau ›</button>
+      </nav>
+    </section>
+  </main>
+  <div id="import-modal" hidden>
+    <div class="modal-box">
+      <div class="modal-head">
+        <h2 id="import-title">📄 Nhập slide</h2>
+        <button id="import-close" title="Đóng">✕</button>
+      </div>
+      <div id="import-body"></div>
+      <div class="modal-foot">
+        <span id="import-status"></span>
+        <button id="import-save" hidden>💾 Lưu các note đã chọn</button>
+      </div>
+    </div>
+  </div>
+  <div id="prompt-modal" hidden>
+    <div class="modal-box prompt-box">
+      <div class="modal-head"><h2 id="prompt-title">＋ Note mới</h2><button id="prompt-close" title="Đóng">✕</button></div>
+      <div class="prompt-body">
+        <label for="prompt-input">Tên note mới</label>
+        <input id="prompt-input" type="text" placeholder="VD: Hồi quy tuyến tính" autocomplete="off" />
+        <small id="prompt-slug" class="prompt-slug"></small>
+      </div>
+      <div class="modal-foot">
+        <button id="prompt-cancel">Huỷ</button>
+        <button id="prompt-ok" class="primary">Tạo</button>
+      </div>
+    </div>
+  </div>
+  <div id="toasts"></div>
+  <script src="vendor/cytoscape.min.js"></script>
+  <script src="vendor/marked.min.js"></script>
+  <script src="vendor/katex/katex.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
