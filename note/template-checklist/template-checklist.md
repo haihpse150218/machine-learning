@@ -183,6 +183,24 @@ Hồi quy              → MAE/RMSE/R²/Adjusted R²
 
 ---
 
+## 🎓 Bài học từ bài tích hợp lớn (PharmaDist) — *verify trước khi phán*
+
+> 🔑 **Nguyên tắc số 1:** mọi con số/giả định phải **kiểm trên data thật TRƯỚC khi tin** — kể cả khi chính mình tự tin. Phiên PharmaDist, verify bắt được 5 lỗi mà chạy-cho-có thì trôi thẳng vào bài.
+
+| Lỗi suýt mắc | Bài học |
+|---|---|
+| Bỏ feature **categorical** bằng trực giác (giữ noise, bỏ signal) | **Test CẢ categorical** (chi² vs nhãn), không chỉ numeric (point-biserial). Đừng chọn cột bằng cảm tính. |
+| Tin `interval_std` là feature mạnh nhất | **Feature degeneracy:** feature cần ≥3 điểm (std khoảng cách giữa đơn) thoái hóa cho entity 1–2 đơn (NaN / std=0 giả) → ra nhiễu. Check % thoái hóa trước khi tin. |
+| **AUC thấp → tưởng model kém** | AUC thấp bất thường → **nghi cách CHIA** (covariate shift do split trên feature mạnh, vd `last_order` ↔ `recency`) — đối xứng với *AUC cao → nghi leakage*. Đo lại bằng split matched / đa snapshot. |
+| Đổ `R²<0` cho "tín hiệu yếu" | Regression **conditional-on-event** + target chặn cứng (cửa sổ [1,k] ngày) → R² thấp là **CẤU TRÚC** (trần by design + mẫu nhỏ + selection bias), không phải model dở. Nêu rõ đánh đổi. |
+| Chặn invalid bằng `<0` | **Xác định THANG thật từ phân phối trước** (1–5 không phải 1–9 → lọt 0/7/9). Nhìn histogram rồi mới chặn miền. |
+| Sửa ràng buộc 2 vế (vd `is_ordered ≤ is_responded`) | Biện minh **chọn vế nào & VÌ SAO** (không adjudicate được từ ngoài → giữ tín hiệu hiếm), không chỉ phát biểu lại ràng buộc. |
+
+> 📌 **Single-T vs multi-snapshot:** single-T snapshot làm "time-split" thành holdout-theo-cohort (lệch recency → AUC giả thấp). **Multi-snapshot** (train mốc cũ → test mốc mới, `GroupKFold` theo entity) = forward-test thật + matched distribution + tăng mẫu → báo đúng năng lực.
+> 📌 **Nộp notebook:** làm sạch *tất định* ngay; **hoãn điền median/mode vào `Pipeline` fit-train**. Fresh-run (Restart & Run All) trước khi nộp. PDF qua VS Code/Chromium (đừng LaTeX) để render Mermaid/ảnh.
+
+---
+
 ## 🧭 Tóm tắt 1 dòng
 **0 xác định vấn đề (+quét ràng buộc) → 1 EDA → 2 làm sạch → 2.5 tích hợp (nếu >1 bảng) → 3 biến đổi → 4 đặc trưng → 4.5 xây nhãn (nếu y chưa có) → 5 chia (time/iid, chống leakage) → 6 train → 7 chống overfit → 8 đánh giá đúng độ đo.**
 > 🔗 Khớp 1-1 với 7 nhóm rubric của bài tích hợp dữ liệu — không còn điểm nào "mồ côi" (Tích hợp 1.5 → Bước 2.5 · Xây nhãn 1.0 → Bước 4.5).
