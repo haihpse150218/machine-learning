@@ -1,0 +1,151 @@
+﻿product_id,product_name,category,sub_category,manufacturer,base_price,drug_type
+P0001,Beta-lactam Kháng-001,Kháng sinh,,Traphaco,396000.0,Rx
+P0002,Chống đông Tim-002,Tim mạch,Chống đông,,323600.0,Rx
+P0003,Sulfonylurea Tiểu-003,Tiểu đường,Sulfonylurea,DHG Pharma,471900.0,Rx
+P0004,Giãn cơ Giảm-004,Giảm đau - Hạ sốt,Giãn cơ,Pymepharco,347800.0,OTC
+P0005,Đa vitamin Vitamin-005,Vitamin - TPCN,Đa vitamin,Traphaco,472900.0,OTC
+P0006,Kháng acid Tiêu-006,Tiêu hóa,Kháng acid,OPV,312500.0,OTC
+P0007,Kháng histamin Hô-007,Hô hấp,Kháng histamin,Imexpharm,378800.0,OTC
+P0008,Kháng nấm Da-008,Da liễu,Kháng nấm,Pymepharco,244100.0,OTC
+P0009,Quinolon Kháng-009,Kháng sinh,Quinolon,Stella,352800.0,Rx
+P0010,Hạ huyết áp Tim-010,Tim mạch,Hạ huyết áp,Imexpharm,204200.0,Rx
+P0011,Sulfonylurea Tiểu-011,Tiểu đường,,Sanofi VN,54900.0,Rx
+P0012,Paracetamol Giảm-012,Giảm đau - Hạ sốt,Paracetamol,DHG Pharma,411400.0,OTC
+P0013,Khoáng chất Vitamin-013,Vitamin - TPCN,Khoáng chất,DHG Pharma,100900.0,OTC
+P0014,Nhuận tràng Tiêu-014,Tiêu hóa,Nhuận tràng,DHG Pharma,281600.0,OTC
+P0015,Xịt mũi Hô-015,Hô hấp,Xịt mũi,DHG Pharma,393700.0,OTC
+P0016,Dưỡng ẩm Da-016,Da liễu,Dưỡng ẩm,Traphaco,247800.0,OTC
+P0017,Quinolon Kháng-017,Kháng sinh,Quinolon,Mekophar,311200.0,Rx
+P0018,Hạ mỡ máu Tim-018,Tim mạch,Hạ mỡ máu,DHG Pharma,178500.0,Rx
+P0019,Insulin Tiểu-019,Tiểu đường,Insulin,Imexpharm,129100.0,Rx
+P0020,Paracetamol Giảm-020,Giảm đau - Hạ sốt,Paracetamol,Imexpharm,238100.0,OTC
+P0021,Khoáng chất Vitamin-021,Vitamin - TPCN,Khoáng chất,OPV,32000.0,OTC
+P0022,Men vi sinh Tiêu-022,Tiêu hóa,,Pymepharco,204300.0,OTC
+P0023,Ho - Long đờm Hô-023,Hô hấp,Ho - Long đờm,Sanofi VN,162800.0,OTC
+P0024,Kháng nấm Da-024,Da liễu,Kháng nấm,DHG Pharma,287100.0,OTC
+P0025,Macrolid Kháng-025,Kháng sinh,Macrolid,OPV,11100.0,Rx
+P0026,Hạ huyết áp Tim-026,Tim mạch,Hạ huyết áp,Sanofi VN,236800.0,Rx
+P0027,Insulin Tiểu-027,Tiểu đường,Insulin,OPV,457100.0,Rx
+P0028,NSAID Giảm-028,Giảm đau - Hạ sốt,NSAID,Pymepharco,257100.0,OTC
+P0029,Khoáng chất Vitamin-029,Vitamin - TPCN,Khoáng chất,Pymepharco,439300.0,OTC
+P0030,Men vi sinh Tiêu-030,Tiêu hóa,Men vi sinh,DHG Pharma,,OTC
+P0031,Xịt mũi Hô-031,Hô hấp,Xịt mũi,Stella,69600.0,OTC
+P0032,Bôi ngoài da Da-032,Da liễu,Bôi ngoài da,DHG Pharma,,OTC
+P0033,Beta-lactam Kháng-033,Kháng sinh,Beta-lactam,Imexpharm,426100.0,Rx
+P0034,Hạ mỡ máu Tim-034,Tim mạch,Hạ mỡ máu,DHG Pharma,295100.0,Rx
+P0035,Insulin Tiểu-035,Tiểu đường,Insulin,Stella,325700.0,Rx
+P0036,NSAID Giảm-036,Giảm đau - Hạ sốt,NSAID,Traphaco,90700.0,OTC
+P0037,Đa vitamin Vitamin-037,Vitamin - TPCN,Đa vitamin,OPV,220500.0,OTC
+P0038,Kháng acid Tiêu-038,Tiêu hóa,Kháng acid,Imexpharm,292900.0,OTC
+P0039,Ho - Long đờm Hô-039,Hô hấp,Ho - Long đờm,DHG Pharma,320000.0,OTC
+P0040,Dưỡng ẩm Da-040,Da liễu,Dưỡng ẩm,Pymepharco,17300.0,OTC
+P0041,Quinolon Kháng-041,Kháng sinh,Quinolon,OPV,474200.0,Rx
+P0042,Chống đông Tim-042,Tim mạch,Chống đông,Mekophar,186900.0,Rx
+P0043,Insulin Tiểu-043,Tiểu đường,Insulin,Traphaco,58300.0,Rx
+P0044,NSAID Giảm-044,Giảm đau - Hạ sốt,NSAID,Sanofi VN,86600.0,OTC
+P0045,Khoáng chất Vitamin-045,Vitamin - TPCN,Khoáng chất,Imexpharm,73700.0,OTC
+P0046,Men vi sinh Tiêu-046,Tiêu hóa,,Imexpharm,421000.0,OTC
+P0047,Ho - Long đờm Hô-047,Hô hấp,Ho - Long đờm,DHG Pharma,223400.0,OTC
+P0048,Kháng nấm Da-048,Da liễu,Kháng nấm,Sanofi VN,,OTC
+P0049,Quinolon Kháng-049,Kháng sinh,Quinolon,Stella,133000.0,Rx
+P0050,Hạ huyết áp Tim-050,Tim mạch,Hạ huyết áp,Sanofi VN,377500.0,Rx
+P0051,Sulfonylurea Tiểu-051,Tiểu đường,Sulfonylurea,Traphaco,443400.0,Rx
+P0052,NSAID Giảm-052,Giảm đau - Hạ sốt,NSAID,OPV,473600.0,OTC
+P0053,Đa vitamin Vitamin-053,Vitamin - TPCN,Đa vitamin,Pymepharco,119100.0,OTC
+P0054,Men vi sinh Tiêu-054,Tiêu hóa,Men vi sinh,Pymepharco,339500.0,OTC
+P0055,Xịt mũi Hô-055,Hô hấp,Xịt mũi,Imexpharm,472100.0,OTC
+P0056,Dưỡng ẩm Da-056,Da liễu,Dưỡng ẩm,Stella,348600.0,OTC
+P0057,Macrolid Kháng-057,Kháng sinh,Macrolid,Pymepharco,25300.0,Rx
+P0058,Chống đông Tim-058,Tim mạch,Chống đông,Sanofi VN,442700.0,Rx
+P0059,Insulin Tiểu-059,Tiểu đường,Insulin,Mekophar,438700.0,Rx
+P0060,NSAID Giảm-060,Giảm đau - Hạ sốt,NSAID,Mekophar,250500.0,OTC
+P0061,Đa vitamin Vitamin-061,Vitamin - TPCN,Đa vitamin,Imexpharm,443700.0,OTC
+P0062,Nhuận tràng Tiêu-062,Tiêu hóa,Nhuận tràng,Stella,117500.0,OTC
+P0063,Kháng histamin Hô-063,Hô hấp,Kháng histamin,DHG Pharma,212000.0,OTC
+P0064,Bôi ngoài da Da-064,Da liễu,Bôi ngoài da,Pymepharco,109700.0,OTC
+P0065,Beta-lactam Kháng-065,Kháng sinh,Beta-lactam,Pymepharco,341900.0,Rx
+P0066,Hạ mỡ máu Tim-066,Tim mạch,Hạ mỡ máu,OPV,324800.0,Rx
+P0067,Sulfonylurea Tiểu-067,Tiểu đường,Sulfonylurea,Traphaco,50800.0,Rx
+P0068,NSAID Giảm-068,Giảm đau - Hạ sốt,NSAID,OPV,26900.0,OTC
+P0069,Khoáng chất Vitamin-069,Vitamin - TPCN,Khoáng chất,Imexpharm,182000.0,OTC
+P0070,Kháng acid Tiêu-070,Tiêu hóa,Kháng acid,OPV,302900.0,OTC
+P0071,Xịt mũi Hô-071,Hô hấp,Xịt mũi,Pymepharco,392900.0,OTC
+P0072,Dưỡng ẩm Da-072,Da liễu,Dưỡng ẩm,Traphaco,193300.0,OTC
+P0073,Beta-lactam Kháng-073,Kháng sinh,Beta-lactam,,61600.0,Rx
+P0074,Hạ huyết áp Tim-074,Tim mạch,Hạ huyết áp,Imexpharm,121700.0,Rx
+P0075,Sulfonylurea Tiểu-075,Tiểu đường,Sulfonylurea,Traphaco,438600.0,Rx
+P0076,Paracetamol Giảm-076,Giảm đau - Hạ sốt,,Imexpharm,44000.0,OTC
+P0077,Men tiêu hóa Vitamin-077,Vitamin - TPCN,Men tiêu hóa,DHG Pharma,84300.0,OTC
+P0078,Kháng acid Tiêu-078,Tiêu hóa,,Sanofi VN,471700.0,OTC
+P0079,Ho - Long đờm Hô-079,Hô hấp,Ho - Long đờm,Stella,417600.0,OTC
+P0080,Bôi ngoài da Da-080,Da liễu,Bôi ngoài da,Sanofi VN,432000.0,OTC
+P0081,Macrolid Kháng-081,Kháng sinh,Macrolid,DHG Pharma,413600.0,Rx
+P0082,Hạ mỡ máu Tim-082,Tim mạch,Hạ mỡ máu,DHG Pharma,270100.0,Rx
+P0083,Metformin Tiểu-083,Tiểu đường,Metformin,,37100.0,Rx
+P0084,Paracetamol Giảm-084,Giảm đau - Hạ sốt,Paracetamol,Traphaco,22600.0,OTC
+P0085,Đa vitamin Vitamin-085,Vitamin - TPCN,Đa vitamin,,243100.0,OTC
+P0086,Kháng acid Tiêu-086,Tiêu hóa,Kháng acid,Pymepharco,134300.0,OTC
+P0087,Kháng histamin Hô-087,Hô hấp,Kháng histamin,Mekophar,189300.0,OTC
+P0088,Bôi ngoài da Da-088,Da liễu,Bôi ngoài da,Traphaco,54400.0,OTC
+P0089,Quinolon Kháng-089,Kháng sinh,Quinolon,Sanofi VN,346400.0,Rx
+P0090,Hạ mỡ máu Tim-090,Tim mạch,Hạ mỡ máu,Pymepharco,394300.0,Rx
+P0091,Sulfonylurea Tiểu-091,Tiểu đường,Sulfonylurea,,162700.0,Rx
+P0092,Paracetamol Giảm-092,Giảm đau - Hạ sốt,Paracetamol,Sanofi VN,371700.0,OTC
+P0093,Men tiêu hóa Vitamin-093,Vitamin - TPCN,Men tiêu hóa,DHG Pharma,166700.0,OTC
+P0094,Men vi sinh Tiêu-094,Tiêu hóa,Men vi sinh,Mekophar,31800.0,OTC
+P0095,Xịt mũi Hô-095,Hô hấp,Xịt mũi,OPV,247600.0,OTC
+P0096,Dưỡng ẩm Da-096,Da liễu,Dưỡng ẩm,Traphaco,162400.0,OTC
+P0097,Quinolon Kháng-097,Kháng sinh,Quinolon,Pymepharco,98500.0,Rx
+P0098,Hạ mỡ máu Tim-098,Tim mạch,Hạ mỡ máu,Sanofi VN,437200.0,Rx
+P0099,Metformin Tiểu-099,Tiểu đường,Metformin,OPV,176100.0,Rx
+P0100,NSAID Giảm-100,Giảm đau - Hạ sốt,NSAID,Traphaco,71500.0,OTC
+P0101,Khoáng chất Vitamin-101,Vitamin - TPCN,Khoáng chất,Imexpharm,76500.0,OTC
+P0102,Kháng acid Tiêu-102,Tiêu hóa,Kháng acid,,198300.0,OTC
+P0103,Kháng histamin Hô-103,Hô hấp,Kháng histamin,Pymepharco,300600.0,OTC
+P0104,Dưỡng ẩm Da-104,Da liễu,Dưỡng ẩm,Mekophar,198500.0,OTC
+P0105,Macrolid Kháng-105,Kháng sinh,Macrolid,Sanofi VN,,Rx
+P0106,Chống đông Tim-106,Tim mạch,Chống đông,OPV,471700.0,Rx
+P0107,Metformin Tiểu-107,Tiểu đường,Metformin,Mekophar,460700.0,Rx
+P0108,NSAID Giảm-108,Giảm đau - Hạ sốt,NSAID,,346700.0,OTC
+P0109,Men tiêu hóa Vitamin-109,Vitamin - TPCN,Men tiêu hóa,OPV,434300.0,OTC
+P0110,Kháng acid Tiêu-110,Tiêu hóa,Kháng acid,Stella,315400.0,OTC
+P0111,Xịt mũi Hô-111,Hô hấp,Xịt mũi,DHG Pharma,,OTC
+P0112,Bôi ngoài da Da-112,Da liễu,Bôi ngoài da,Stella,365500.0,OTC
+P0113,Macrolid Kháng-113,Kháng sinh,Macrolid,Imexpharm,357800.0,Rx
+P0114,Hạ huyết áp Tim-114,Tim mạch,Hạ huyết áp,OPV,234000.0,Rx
+P0115,Sulfonylurea Tiểu-115,Tiểu đường,Sulfonylurea,Mekophar,151400.0,Rx
+P0116,Giãn cơ Giảm-116,Giảm đau - Hạ sốt,Giãn cơ,OPV,443200.0,OTC
+P0117,Khoáng chất Vitamin-117,Vitamin - TPCN,Khoáng chất,Traphaco,429500.0,OTC
+P0118,Kháng acid Tiêu-118,Tiêu hóa,Kháng acid,DHG Pharma,377700.0,OTC
+P0119,Ho - Long đờm Hô-119,Hô hấp,Ho - Long đờm,Stella,88200.0,OTC
+P0120,Bôi ngoài da Da-120,Da liễu,Bôi ngoài da,DHG Pharma,166200.0,OTC
+P0121,Quinolon Kháng-121,Kháng sinh,Quinolon,Imexpharm,13900.0,Rx
+P0122,Hạ mỡ máu Tim-122,Tim mạch,Hạ mỡ máu,OPV,377400.0,Rx
+P0123,Sulfonylurea Tiểu-123,Tiểu đường,Sulfonylurea,Stella,229300.0,Rx
+P0124,Giãn cơ Giảm-124,Giảm đau - Hạ sốt,Giãn cơ,Stella,,OTC
+P0125,Khoáng chất Vitamin-125,Vitamin - TPCN,Khoáng chất,Imexpharm,167300.0,OTC
+P0126,Nhuận tràng Tiêu-126,Tiêu hóa,Nhuận tràng,Traphaco,190200.0,OTC
+P0127,Ho - Long đờm Hô-127,Hô hấp,Ho - Long đờm,Stella,133000.0,OTC
+P0128,Dưỡng ẩm Da-128,Da liễu,Dưỡng ẩm,Imexpharm,103200.0,OTC
+P0129,Quinolon Kháng-129,Kháng sinh,Quinolon,Traphaco,120700.0,Rx
+P0130,Hạ huyết áp Tim-130,Tim mạch,Hạ huyết áp,DHG Pharma,329100.0,Rx
+P0131,Metformin Tiểu-131,Tiểu đường,Metformin,Mekophar,326800.0,Rx
+P0132,Giãn cơ Giảm-132,Giảm đau - Hạ sốt,Giãn cơ,Imexpharm,384500.0,OTC
+P0133,Khoáng chất Vitamin-133,Vitamin - TPCN,Khoáng chất,Imexpharm,197200.0,OTC
+P0134,Nhuận tràng Tiêu-134,Tiêu hóa,Nhuận tràng,DHG Pharma,417800.0,OTC
+P0135,Ho - Long đờm Hô-135,Hô hấp,,Traphaco,,OTC
+P0136,Dưỡng ẩm Da-136,Da liễu,Dưỡng ẩm,Pymepharco,317200.0,OTC
+P0137,Beta-lactam Kháng-137,Kháng sinh,Beta-lactam,Pymepharco,436800.0,Rx
+P0138,Hạ huyết áp Tim-138,Tim mạch,Hạ huyết áp,Pymepharco,67800.0,Rx
+P0139,Insulin Tiểu-139,Tiểu đường,Insulin,Pymepharco,402700.0,Rx
+P0140,Giãn cơ Giảm-140,Giảm đau - Hạ sốt,Giãn cơ,Stella,128400.0,OTC
+P0141,Men tiêu hóa Vitamin-141,Vitamin - TPCN,Men tiêu hóa,Mekophar,49500.0,OTC
+P0142,Nhuận tràng Tiêu-142,Tiêu hóa,Nhuận tràng,Imexpharm,186300.0,OTC
+P0143,Ho - Long đờm Hô-143,Hô hấp,Ho - Long đờm,Pymepharco,225500.0,OTC
+P0144,Bôi ngoài da Da-144,Da liễu,Bôi ngoài da,Sanofi VN,33200.0,OTC
+P0145,Macrolid Kháng-145,Kháng sinh,Macrolid,Sanofi VN,119000.0,Rx
+P0146,Hạ huyết áp Tim-146,Tim mạch,Hạ huyết áp,Stella,372700.0,Rx
+P0147,Insulin Tiểu-147,Tiểu đường,Insulin,OPV,210200.0,Rx
+P0148,Paracetamol Giảm-148,Giảm đau - Hạ sốt,Paracetamol,Sanofi VN,285600.0,OTC
+P0149,Đa vitamin Vitamin-149,Vitamin - TPCN,Đa vitamin,DHG Pharma,84500.0,OTC
+P0150,Kháng acid Tiêu-150,Tiêu hóa,Kháng acid,Imexpharm,16300.0,OTC

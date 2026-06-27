@@ -4,6 +4,7 @@
 
 ## Nội dung
 - **[[template-checklist]]** (`template-checklist.md`) — Plan 8 bước: xác định vấn đề → EDA → làm sạch → biến đổi → đặc trưng → chia (chống leakage) → train → đánh giá.
+- **[[eda-checklist]]** (`eda-checklist.md`) — checklist con của Bước 1: **mọi phương pháp EDA** (per-file → nhiều bảng → hướng target/thời gian) để khám phá không sót.
 
 ## Cách dùng
 - Mỗi khi học xong buổi mới / rút ra bài học → **cập nhật bước tương ứng** (đừng để kiến thức tản mác).

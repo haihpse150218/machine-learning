@@ -1,22 +1,4 @@
-# Dependencies
-node_modules/
-
-# Python
-__pycache__/
-*.pyc
-.ipynb_checkpoints/
-.venv/
-venv/
-
-# OS / archives
 __MACOSX/
 *.zip
-.DS_Store
-Thumbs.db
-
-# Claude Code local settings
-.claude/
-
-# Editor
-.vscode/
-.idea/
+_rubric_extract/
+.ipynb_checkpoints/

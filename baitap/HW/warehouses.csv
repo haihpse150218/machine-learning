@@ -1,0 +1,26 @@
+﻿warehouse_id,warehouse_name,region,warehouse_type,opened_date
+W001,Kho Bắc 01,Bắc,Trung tâm,2015-08-13
+W002,Kho Trung 02,Trung,Trung tâm,2022-06-06
+W003,Kho Nam 03,Nam,Trung tâm,2021-09-01
+W004,Kho Bắc 04,Bắc,Trung tâm,2020-07-28
+W005,Kho Trung 05,Trung,Trung tâm,11/10/2019
+W006,Kho Nam 06,Nam,Trung tâm,2015-12-27
+W007,Kho Bắc 07,Bắc,Vệ tinh,2021-04-25
+W008,Kho Trung 08,Trung,Vệ tinh,2018-03-18
+W009,Kho Nam 09,Nam,Vệ tinh,2016-08-04
+W010,Kho Bắc 10,Bắc,Vệ tinh,2022-11-14
+W011,Kho Trung 11,Trung,Vệ tinh,2021-12-21
+W012,Kho Nam 12,Nam,Vệ tinh,2017-04-04
+W013,Kho Bắc 13,Bắc,Vệ tinh,03/05/2016
+W014,Kho Trung 14,Trung,Vệ tinh,2022-08-03
+W015,Kho Nam 15,Nam,Vệ tinh,2015-11-19
+W016,Kho Bắc 16,Bắc,Vệ tinh,2017-02-17
+W017,Kho Trung 17,Trung,Vệ tinh,2017-08-12
+W018,Kho Nam 18,Nam,Vệ tinh,2018-10-12
+W019,Kho Bắc 19,Bắc,Vệ tinh,2016-01-06
+W020,Kho Trung 20,Trung,Vệ tinh,2017-11-24
+W021,Kho Nam 21,Nam,Vệ tinh,2021-05-11
+W022,Kho Bắc 22,Bắc,Vệ tinh,2015-11-20
+W023,Kho Trung 23,Trung,Vệ tinh,2015-01-21
+W024,Kho Nam 24,Nam,,2019-10-17
+W025,Kho Bắc 25,Bắc,Vệ tinh,2021-02-18

@@ -1,0 +1,701 @@
+﻿ticket_id,pharmacy_id,created_date,channel,issue_type,resolution_status,satisfaction_score
+T0001,PH0234,2025-06-28,Call,Giao trễ,Pending,
+T0002,PH0451,2025-01-27,Zalo,Công nợ,Escalated,
+T0003,PH0323,08/07/2025,Call,Sai hàng,Resolved,1.0
+T0004,PH0413,2024-03-15,Sales rep,Chất lượng,Resolved,1.0
+T0005,PH0007,2022-11-05,Zalo,Công nợ,Resolved,2.0
+T0006,PH0246,2024-05-10,Email,Chất lượng,Resolved,2.0
+T0007,PH0229,2025-07-04,Sales rep,Đổi trả,Pending,
+T0008,PH0098,2023-05-07,Call,,Pending,
+T0009,PH0012,2024-08-17,Call,Đổi trả,Resolved,
+T0010,PH0099,08-21-2025,Zalo,Công nợ,Resolved,4.0
+T0011,PH0066,03-04-2024,Zalo,Sai hàng,Resolved,4.0
+T0012,PH0491,2024-05-16,Sales rep,Đổi trả,Resolved,3.0
+T0013,PH0405,23/06/2024,Call,Chất lượng,Escalated,
+T0014,PH0258,31/08/2025,Sales rep,Công nợ,Resolved,3.0
+T0015,PH0070,2025-01-02,Zalo,,Resolved,3.0
+T0016,PH0714,2021-07-22,Email,Công nợ,Resolved,5.0
+T0017,PH0671,2024-10-26,Zalo,Giao trễ,Resolved,4.0
+T0018,PH0088,2025-02-04,Zalo,Sai hàng,Resolved,4.0
+T0019,PH0782,2025-04-07,Pigeon,Chất lượng,Resolved,2.0
+T0020,PH0011,08-26-2025,Pigeon,Chất lượng,Resolved,5.0
+T0021,PH0146,2025-09-29,Zalo,Sai hàng,Resolved,5.0
+T0022,PH0388,07-01-2024,Email,Công nợ,Resolved,4.0
+T0023,PH0479,2024-03-02,Call,Chất lượng,Resolved,5.0
+T0024,PH0329,2025-08-31,Email,Công nợ,Resolved,3.0
+T0025,PH0784,2025-06-07,Zalo,Công nợ,Resolved,5.0
+T0026,PH0455,2025-12-22,Sales rep,Sai hàng,Resolved,1.0
+T0027,PH0057,2022-08-15,Sales rep,Sai hàng,Pending,
+T0028,PH0533,20/03/2023,Call,Sai hàng,Resolved,3.0
+T0029,PH0138,2025-12-01,Call,Đổi trả,Escalated,
+T0030,PH0012,2025-08-09,Zalo,Đổi trả,Resolved,
+T0031,PH0151,30/06/2025,Email,Sai hàng,Resolved,5.0
+T0032,PH0627,2025-01-27,Sales rep,Chất lượng,Resolved,2.0
+T0033,PH0137,07-31-2024,Call,Công nợ,Pending,
+T0034,PH0460,2025-04-25,Call,Chất lượng,Escalated,
+T0035,PH0756,2023-07-31,Email,Chất lượng,Resolved,5.0
+T0036,PH0291,2025-10-11,Email,Sai hàng,Resolved,1.0
+T0037,PH0596,2022-06-13,Email,Chất lượng,Resolved,1.0
+T0038,PH0448,2024-08-03,Email,Đổi trả,Resolved,2.0
+T0039,PH0061,2024-09-21,,Chất lượng,Resolved,3.0
+T0040,PH0288,2024-04-16,Zalo,Sai hàng,Resolved,3.0
+T0041,PH0080,02-16-2024,Sales rep,Sai hàng,Resolved,1.0
+T0042,PH0346,2024-12-27,Sales rep,Chất lượng,Resolved,2.0
+T0043,PH0413,2023-07-08,Zalo,Giao trễ,Resolved,2.0
+T0044,PH0193,02/06/2021,Zalo,Đổi trả,Resolved,2.0
+T0045,PH0411,2025-03-25,Zalo,Giao trễ,Resolved,1.0
+T0046,PH0648,2025-02-15,Call,Sai hàng,Pending,
+T0047,PH0454,2025-10-20,Zalo,Đổi trả,Resolved,1.0
+T0048,PH0237,10-04-2025,Call,,Resolved,1.0
+T0049,PH0258,2024-05-21,Call,Sai hàng,Resolved,1.0
+T0050,PH0679,2025-08-19,Sales rep,Chất lượng,Resolved,5.0
+T0051,PH0418,10-31-2025,Sales rep,Công nợ,Resolved,3.0
+T0052,PH0132,03/03/2023,Zalo,Chất lượng,Resolved,
+T0053,PH0532,2025-08-09,Call,Công nợ,Pending,
+T0054,PH0204,2025-09-14,Zalo,Giao trễ,Resolved,
+T0055,PH0232,2023-09-05,Zalo,Đổi trả,Resolved,2.0
+T0056,PH0570,24/04/2021,Call,Giao trễ,Resolved,5.0
+T0057,PH0036,2024-01-09,Sales rep,Công nợ,Resolved,4.0
+T0058,PH0277,2023-07-05,Email,Sai hàng,Resolved,2.0
+T0059,PH0051,2025-07-30,Email,Công nợ,Escalated,
+T0060,PH0221,04-20-2022,Email,Chất lượng,Resolved,2.0
+T0061,PH0219,2025-10-31,Zalo,Sai hàng,Resolved,1.0
+T0062,PH0038,05/01/2025,Zalo,Đổi trả,Resolved,3.0
+T0063,PH0146,12/11/2025,Call,Sai hàng,Resolved,4.0
+T0064,PH0783,2025-09-01,Sales rep,Sai hàng,Resolved,
+T0065,PH0679,2024-10-28,Zalo,Đổi trả,Pending,2.0
+T0066,PH0341,2024-07-27,Zalo,Đổi trả,Pending,
+T0067,PH0691,2025-05-30,Email,Sai hàng,Resolved,-1.0
+T0068,PH0581,2023-08-07,Sales rep,Công nợ,Resolved,2.0
+T0069,PH0457,2025-09-08,Zalo,Công nợ,Pending,
+T0070,PH0320,2025-11-13,Call,Sai hàng,Resolved,2.0
+T0071,PH0367,2025-11-09,Call,Công nợ,Resolved,1.0
+T0072,PH0136,08-08-2022,Zalo,Công nợ,Resolved,1.0
+T0073,PH0075,2024-11-04,Sales rep,,Resolved,5.0
+T0074,PH0137,2023-12-04,Zalo,Công nợ,Pending,1.0
+T0075,PH0695,2024-01-18,Email,Chất lượng,Resolved,1.0
+T0076,PH0053,2024-01-24,Call,Chất lượng,Resolved,5.0
+T0077,PH0790,2024-11-08,Zalo,Sai hàng,Resolved,2.0
+T0078,PH0420,2024-01-09,Zalo,Giao trễ,Escalated,
+T0079,PH0382,2024-08-01,Zalo,Chất lượng,Resolved,4.0
+T0080,PH0167,2023-12-10,Zalo,Giao trễ,Resolved,4.0
+T0081,PH0396,2025-07-10,Email,Sai hàng,Pending,5.0
+T0082,PH0589,2023-08-15,Call,Chất lượng,Resolved,3.0
+T0083,PH0313,12/12/2023,Call,Sai hàng,Resolved,
+T0084,PH0127,2021-02-02,Call,Chất lượng,Resolved,5.0
+T0085,PH0762,2025-07-07,Email,Công nợ,Pending,3.0
+T0086,PH0060,2023-09-26,Email,Đổi trả,Resolved,4.0
+T0087,PH0451,2025-01-16,Pigeon,Sai hàng,Resolved,2.0
+T0088,PH0158,2023-03-26,Sales rep,Sai hàng,Escalated,
+T0089,PH0522,2025-11-17,Sales rep,Công nợ,Resolved,5.0
+T0090,PH0399,2024-09-28,Zalo,Công nợ,Pending,
+T0091,PH0216,2024-02-28,,Sai hàng,Resolved,
+T0092,PH0377,2023-09-06,Zalo,Công nợ,Resolved,2.0
+T0093,PH0521,2023-07-29,Pigeon,Sai hàng,Resolved,3.0
+T0094,PH0097,2021-05-01,Email,Đổi trả,Escalated,
+T0095,PH0322,2022-08-13,Email,Chất lượng,Resolved,2.0
+T0096,PH0593,2024-10-27,Sales rep,Đổi trả,Resolved,1.0
+T0097,PH0174,2023-08-05,Zalo,Chất lượng,Pending,
+T0098,PH0118,2023-08-20,Call,Sai hàng,Resolved,1.0
+T0099,PH0408,2025-10-09,Email,Sai hàng,Resolved,3.0
+T0100,PH0403,24/09/2025,Zalo,Chất lượng,Resolved,5.0
+T0101,PH0172,2023-05-05,Email,Công nợ,Resolved,1.0
+T0102,PH0308,2024-10-29,Call,Chất lượng,Resolved,1.0
+T0103,PH0114,2025-10-03,Zalo,Công nợ,Resolved,5.0
+T0104,PH0467,2023-06-06,Email,Công nợ,Resolved,4.0
+T0105,PH0288,2025-10-27,Call,Đổi trả,Resolved,3.0
+T0106,PH0252,2023-05-24,Call,Đổi trả,Resolved,4.0
+T0107,PH0631,2025-09-01,Zalo,Công nợ,Resolved,4.0
+T0108,PH0296,2024-11-10,Email,Chất lượng,Resolved,
+T0109,PH0277,2023-06-05,,Công nợ,Resolved,5.0
+T0110,PH0098,2024-05-01,Sales rep,Đổi trả,Escalated,
+T0111,PH0565,2021-07-08,Call,Giao trễ,Resolved,3.0
+T0112,PH0517,09-16-2025,Zalo,Chất lượng,Resolved,2.0
+T0113,PH0644,2024-09-30,Call,,Escalated,
+T0114,PH0375,2024-11-19,Email,Chất lượng,Pending,
+T0115,PH0321,2024-09-10,,Chất lượng,Pending,
+T0116,PH0726,2025-05-16,Email,Đổi trả,Resolved,
+T0117,PH0255,31/10/2025,Zalo,Sai hàng,Escalated,
+T0118,PH0689,2025-05-09,Zalo,Sai hàng,Escalated,
+T0119,PH0461,2025-09-16,Zalo,Sai hàng,Pending,
+T0120,PH0035,2023-10-31,Sales rep,Giao trễ,Resolved,3.0
+T0121,PH0388,2024-06-14,Zalo,Sai hàng,Escalated,
+T0122,PH0723,2025-12-31,Sales rep,Công nợ,Resolved,3.0
+T0123,PH0572,10-05-2023,Sales rep,Sai hàng,Resolved,3.0
+T0124,PH0012,06-05-2025,Call,Giao trễ,Resolved,2.0
+T0125,PH0413,2024-06-05,Email,,Pending,
+T0126,PH0493,2021-02-06,Zalo,Công nợ,Pending,
+T0127,PH0193,14/10/2024,Call,Sai hàng,Resolved,2.0
+T0128,PH0475,2025-06-27,Sales rep,Công nợ,Resolved,4.0
+T0129,PH0263,2025-03-28,Zalo,,Resolved,5.0
+T0130,PH0579,2025-10-01,Email,Giao trễ,Resolved,4.0
+T0131,PH0025,2023-03-15,Sales rep,Sai hàng,Resolved,5.0
+T0132,PH0653,2025-08-15,Call,Giao trễ,Resolved,3.0
+T0133,PH0365,2024-11-11,Sales rep,Sai hàng,Resolved,2.0
+T0134,PH0123,12/06/2025,Zalo,Công nợ,Escalated,
+T0135,PH0036,2025-02-19,Sales rep,Đổi trả,Resolved,2.0
+T0136,PH0673,2025-08-18,,Đổi trả,Resolved,4.0
+T0137,PH0506,02-24-2023,Sales rep,Công nợ,Resolved,5.0
+T0138,PH0526,2025-09-23,Zalo,Công nợ,Resolved,
+T0139,PH0418,2025-12-06,Call,Công nợ,Pending,
+T0140,PH0233,2025-07-26,,Giao trễ,Resolved,
+T0141,PH0539,2025-05-18,Sales rep,Sai hàng,Resolved,2.0
+T0142,PH0630,2025-06-02,Sales rep,Đổi trả,Resolved,5.0
+T0143,PH0092,2025-04-03,Email,Sai hàng,Escalated,
+T0144,PH0600,2020-11-26,Zalo,Công nợ,Resolved,1.0
+T0145,PH0759,03-19-2025,Email,Sai hàng,Resolved,9.0
+T0146,PH0487,2025-09-22,Call,Chất lượng,Resolved,
+T0147,PH0160,2025-08-11,Call,Đổi trả,Resolved,1.0
+T0148,PH0718,2022-12-18,Email,Đổi trả,Resolved,1.0
+T0149,PH0589,2024-02-01,Call,Công nợ,Resolved,3.0
+T0150,PH0010,12-15-2025,Sales rep,Công nợ,Escalated,
+T0151,PH0438,2025-02-26,Zalo,Công nợ,Resolved,5.0
+T0152,PH0339,2021-11-05,Call,Giao trễ,Resolved,3.0
+T0153,PH0645,2025-11-15,Email,Giao trễ,Resolved,5.0
+T0154,PH0462,2022-06-09,Zalo,Công nợ,Resolved,5.0
+T0155,PH0400,2022-11-28,Sales rep,Sai hàng,Resolved,4.0
+T0156,PH0337,2025-09-05,Email,Giao trễ,Resolved,5.0
+T0157,PH0383,2023-01-28,Zalo,Chất lượng,Resolved,4.0
+T0158,PH0651,2025-09-15,Zalo,Chất lượng,Resolved,2.0
+T0159,PH0796,2024-06-19,Sales rep,,Resolved,4.0
+T0160,PH0356,2020-11-27,Zalo,Giao trễ,Pending,4.0
+T0161,PH0447,2024-09-04,Zalo,Đổi trả,Resolved,2.0
+T0162,PH0359,2022-12-22,Pigeon,Đổi trả,Resolved,2.0
+T0163,PH0472,2021-11-09,Email,Sai hàng,Resolved,1.0
+T0164,PH0537,22/06/2020,Email,Đổi trả,Pending,
+T0165,PH0660,2022-07-28,Sales rep,Đổi trả,Pending,
+T0166,PH0569,2025-06-18,Call,Đổi trả,Resolved,2.0
+T0167,PH0123,2025-10-14,Zalo,Sai hàng,Resolved,2.0
+T0168,PH0310,2023-11-29,Email,,Resolved,2.0
+T0169,PH0550,2025-11-04,,Chất lượng,Resolved,2.0
+T0170,PH0275,2025-09-09,Zalo,Giao trễ,Escalated,
+T0171,PH0242,07-15-2024,Sales rep,,Pending,
+T0172,PH0357,07-02-2024,Email,Công nợ,Escalated,
+T0173,PH0275,2025-09-25,Email,Chất lượng,Resolved,5.0
+T0174,PH0658,2024-10-29,Email,Giao trễ,Resolved,2.0
+T0175,PH0082,2024-07-13,Sales rep,Giao trễ,Resolved,1.0
+T0176,PH0772,2025-08-06,Sales rep,Công nợ,Resolved,1.0
+T0177,PH0682,2025-08-08,Zalo,Chất lượng,Resolved,4.0
+T0178,PH0528,2022-10-16,Call,Chất lượng,Resolved,2.0
+T0179,PH0342,24/03/2025,Sales rep,Công nợ,Resolved,2.0
+T0180,PH0075,2024-01-08,Email,Chất lượng,Resolved,5.0
+T0181,PH0753,2022-06-21,Zalo,Giao trễ,Resolved,2.0
+T0182,PH0518,2023-05-20,Email,Giao trễ,Resolved,5.0
+T0183,PH0380,2023-11-21,Sales rep,Giao trễ,Resolved,5.0
+T0184,PH0571,2021-02-16,Email,Đổi trả,Resolved,4.0
+T0185,PH0388,2023-04-14,Email,Công nợ,Resolved,5.0
+T0186,PH0392,2025-07-04,Email,Chất lượng,Resolved,5.0
+T0187,PH0522,2025-01-28,Sales rep,Chất lượng,Pending,
+T0188,PH0316,2025-09-29,Zalo,Giao trễ,Escalated,
+T0189,PH0740,2024-10-04,Zalo,Sai hàng,Resolved,5.0
+T0190,PH0439,2025-05-23,Email,Đổi trả,Resolved,3.0
+T0191,PH0106,2025-04-10,Zalo,Giao trễ,Pending,
+T0192,PH0737,2021-03-08,Sales rep,Giao trễ,Resolved,4.0
+T0193,PH0719,2025-07-17,Call,Đổi trả,Resolved,1.0
+T0194,PH0593,2025-01-10,Sales rep,Giao trễ,Resolved,2.0
+T0195,PH0522,2025-11-28,Zalo,Chất lượng,Resolved,5.0
+T0196,PH0450,2023-01-11,Email,Công nợ,Resolved,2.0
+T0197,PH0135,2025-06-22,Zalo,Giao trễ,Resolved,5.0
+T0198,PH0251,2025-01-04,Email,Giao trễ,Pending,
+T0199,PH0513,2023-06-29,,Sai hàng,Resolved,2.0
+T0200,PH0026,2025-08-29,Sales rep,Đổi trả,Resolved,1.0
+T0201,PH0592,2025-06-06,Sales rep,Chất lượng,Pending,
+T0202,PH0054,2025-03-18,Zalo,,Resolved,4.0
+T0203,PH0673,22/03/2023,Sales rep,Công nợ,Resolved,0.0
+T0204,PH0457,2025-06-13,Email,Sai hàng,Escalated,
+T0205,PH0436,02-07-2024,Email,Giao trễ,Pending,
+T0206,PH0280,20/04/2023,Sales rep,Công nợ,Resolved,3.0
+T0207,PH0270,09-07-2021,Sales rep,Đổi trả,Resolved,1.0
+T0208,PH0097,2024-11-29,Zalo,Sai hàng,Resolved,4.0
+T0209,PH0481,2023-06-29,Zalo,,Resolved,
+T0210,PH0458,2025-09-27,Zalo,Sai hàng,Resolved,5.0
+T0211,PH0438,2024-10-21,Call,Sai hàng,Escalated,
+T0212,PH0338,12/05/2025,Call,Sai hàng,Resolved,3.0
+T0213,PH0436,12/01/2024,Call,Chất lượng,Resolved,4.0
+T0214,PH0385,2025-11-11,Call,Chất lượng,Pending,
+T0215,PH0026,2025-08-15,Call,Công nợ,Resolved,4.0
+T0216,PH0131,2024-09-20,Call,Đổi trả,Resolved,2.0
+T0217,PH0414,2021-11-16,Email,Sai hàng,Pending,
+T0218,PH0731,2022-07-31,Call,,Escalated,
+T0219,PH0693,2025-01-31,Sales rep,Chất lượng,Resolved,2.0
+T0220,PH0691,2025-05-05,Email,Giao trễ,Pending,1.0
+T0221,PH0584,2024-07-31,Sales rep,Chất lượng,Pending,
+T0222,PH0485,2025-11-26,Call,Sai hàng,Pending,
+T0223,PH0649,2025-02-07,Sales rep,Chất lượng,Resolved,1.0
+T0224,PH0145,2025-11-09,Sales rep,Sai hàng,Resolved,5.0
+T0225,PH0692,2024-10-11,Pigeon,Công nợ,Escalated,
+T0226,PH0048,2024-12-08,Zalo,Đổi trả,Resolved,0.0
+T0227,PH0329,2025-10-01,,,Resolved,2.0
+T0228,PH0144,28/01/2024,Email,Đổi trả,Resolved,5.0
+T0229,PH0022,08-18-2023,Email,Công nợ,Resolved,4.0
+T0230,PH0700,2025-05-15,Call,Công nợ,Resolved,4.0
+T0231,PH0060,2023-08-18,Call,Sai hàng,Resolved,3.0
+T0232,PH0007,2023-10-05,Zalo,Giao trễ,Resolved,2.0
+T0233,PH0641,2025-01-18,Email,Giao trễ,Resolved,
+T0234,PH0302,2025-08-06,Call,Đổi trả,Resolved,5.0
+T0235,PH0735,04-14-2024,Sales rep,Sai hàng,Resolved,2.0
+T0236,PH0767,2025-04-11,Email,Đổi trả,Escalated,
+T0237,PH0033,2023-04-14,Zalo,Công nợ,Resolved,2.0
+T0238,PH0253,2020-07-16,Call,Giao trễ,Resolved,3.0
+T0239,PH0061,26/07/2025,Pigeon,Chất lượng,Resolved,4.0
+T0240,PH0371,2021-06-28,Sales rep,Giao trễ,Pending,
+T0241,PH0751,2025-03-03,Sales rep,Giao trễ,Resolved,5.0
+T0242,PH0342,2023-07-22,Zalo,Công nợ,Resolved,3.0
+T0243,PH0179,2024-02-16,Zalo,Sai hàng,Resolved,2.0
+T0244,PH0017,2023-10-15,Call,Giao trễ,Resolved,5.0
+T0245,PH0095,2022-05-10,Email,Sai hàng,Pending,
+T0246,PH0340,12-07-2025,,Đổi trả,Resolved,5.0
+T0247,PH0528,2024-12-20,Email,,Resolved,5.0
+T0248,PH0797,2025-08-02,Email,Đổi trả,Resolved,1.0
+T0249,PH0735,04/03/2025,Email,Công nợ,Escalated,
+T0250,PH0618,2025-06-05,Call,Công nợ,Resolved,4.0
+T0251,PH0023,29/07/2025,Zalo,Sai hàng,Resolved,3.0
+T0252,PH0647,2025-08-02,Zalo,Đổi trả,Pending,
+T0253,PH0069,2024-03-27,Email,Công nợ,Escalated,
+T0254,PH0295,12-24-2025,Call,Giao trễ,Pending,
+T0255,PH0787,06-15-2025,Sales rep,Công nợ,Escalated,
+T0256,PH0235,18/08/2024,Call,Giao trễ,Resolved,2.0
+T0257,PH0581,2025-03-28,Zalo,Công nợ,Resolved,7.0
+T0258,PH0435,04-01-2024,Email,Chất lượng,Resolved,0.0
+T0259,PH0097,2022-07-24,Zalo,Công nợ,Pending,
+T0260,PH0265,2022-07-03,Zalo,Sai hàng,Pending,
+T0261,PH0398,03/01/2023,Zalo,Công nợ,Pending,
+T0262,PH0229,2025-07-26,Email,Đổi trả,Pending,1.0
+T0263,PH0490,11-21-2022,Zalo,Chất lượng,Pending,
+T0264,PH0664,2025-08-28,Zalo,Sai hàng,Resolved,1.0
+T0265,PH0159,2023-11-27,Email,Chất lượng,Pending,
+T0266,PH0422,2024-07-06,Call,Giao trễ,Pending,
+T0267,PH0303,2023-11-04,Zalo,Công nợ,Resolved,5.0
+T0268,PH0415,01-22-2025,Zalo,Chất lượng,Resolved,1.0
+T0269,PH0650,2025-11-19,Call,Đổi trả,Resolved,3.0
+T0270,PH0543,2024-04-15,Call,Sai hàng,Resolved,2.0
+T0271,PH0621,25/09/2023,Email,Đổi trả,Resolved,3.0
+T0272,PH0573,2021-09-13,Zalo,Đổi trả,Resolved,1.0
+T0273,PH0057,2023-05-30,Email,Giao trễ,Resolved,2.0
+T0274,PH0699,2020-10-02,Call,Đổi trả,Resolved,4.0
+T0275,PH0165,2025-04-20,Call,Chất lượng,Escalated,
+T0276,PH0513,2025-07-30,Email,Chất lượng,Escalated,
+T0277,PH0386,2025-10-27,Call,Sai hàng,Resolved,4.0
+T0278,PH0125,2024-04-09,Email,Công nợ,Escalated,
+T0279,PH0775,2024-12-14,Sales rep,Đổi trả,Resolved,5.0
+T0280,PH0632,2025-11-09,Call,Công nợ,Resolved,1.0
+T0281,PH0794,01/02/2025,Zalo,Chất lượng,Resolved,1.0
+T0282,PH0158,2025-03-21,Call,Sai hàng,Resolved,7.0
+T0283,PH0214,2024-12-06,Sales rep,Đổi trả,Resolved,4.0
+T0284,PH0386,2023-07-01,Zalo,Sai hàng,Resolved,5.0
+T0285,PH0619,2022-11-26,,Công nợ,Pending,4.0
+T0286,PH0458,17/07/2025,Email,Giao trễ,Resolved,2.0
+T0287,PH0449,2025-06-24,Zalo,Chất lượng,Resolved,2.0
+T0288,PH0099,2025-07-29,Email,Công nợ,Escalated,
+T0289,PH0118,2021-02-23,Call,Công nợ,Resolved,1.0
+T0290,PH0765,2025-03-21,Call,Chất lượng,Resolved,4.0
+T0291,PH0178,2022-06-21,Sales rep,Giao trễ,Resolved,5.0
+T0292,PH0348,2023-02-14,Sales rep,,Resolved,2.0
+T0293,PH0245,2025-08-15,Zalo,Đổi trả,Resolved,2.0
+T0294,PH0572,2023-02-26,Zalo,Công nợ,Pending,
+T0295,PH0135,2025-09-08,Sales rep,Công nợ,Pending,
+T0296,PH0204,2025-04-15,Zalo,Giao trễ,Resolved,2.0
+T0297,PH0191,2020-10-10,Zalo,Công nợ,Resolved,
+T0298,PH0330,06-17-2022,Sales rep,Đổi trả,Resolved,1.0
+T0299,PH0753,12-03-2025,Sales rep,Đổi trả,Resolved,4.0
+T0300,PH0673,2024-04-13,Email,,Escalated,
+T0301,PH0052,2021-05-06,Zalo,Giao trễ,Resolved,3.0
+T0302,PH0105,2024-06-24,Email,Đổi trả,Resolved,1.0
+T0303,PH0626,2024-02-04,Sales rep,Sai hàng,Resolved,1.0
+T0304,PH0685,20/04/2025,Sales rep,Công nợ,Resolved,5.0
+T0305,PH0421,2025-09-16,Email,Đổi trả,Pending,
+T0306,PH0377,2025-11-10,Zalo,Công nợ,Resolved,7.0
+T0307,PH0753,2024-07-22,Pigeon,Sai hàng,Resolved,4.0
+T0308,PH0769,2023-08-26,Zalo,,Resolved,5.0
+T0309,PH0049,2025-08-12,Zalo,Sai hàng,Resolved,2.0
+T0310,PH0077,2022-08-17,Sales rep,Đổi trả,Resolved,
+T0311,PH0229,2024-11-16,Zalo,Sai hàng,Resolved,1.0
+T0312,PH0269,2023-07-10,Email,Công nợ,Pending,
+T0313,PH0353,2025-11-30,Call,Chất lượng,Resolved,5.0
+T0314,PH0124,2025-06-19,Email,Đổi trả,Resolved,1.0
+T0315,PH0042,2025-03-27,Zalo,Đổi trả,Pending,
+T0316,PH0187,2025-06-18,Email,Công nợ,Resolved,2.0
+T0317,PH0576,09-28-2024,Call,Giao trễ,Escalated,
+T0318,PH0581,2023-05-05,Call,Giao trễ,Resolved,4.0
+T0319,PH0145,2025-12-31,Sales rep,Đổi trả,Pending,
+T0320,PH0368,2023-05-16,Email,Công nợ,Resolved,5.0
+T0321,PH0016,09-21-2025,Call,Sai hàng,Resolved,4.0
+T0322,PH0355,2024-09-19,Call,Đổi trả,Pending,
+T0323,PH0659,2025-11-05,Call,Giao trễ,Pending,
+T0324,PH0435,2025-12-08,Zalo,Sai hàng,Resolved,3.0
+T0325,PH0752,22/06/2025,Email,Công nợ,Resolved,5.0
+T0326,PH0144,2024-09-06,Zalo,Công nợ,Escalated,
+T0327,PH0703,2025-08-30,Email,Chất lượng,Resolved,1.0
+T0328,PH0116,2025-08-09,Email,Sai hàng,Resolved,3.0
+T0329,PH0193,2021-04-17,Pigeon,Đổi trả,Pending,
+T0330,PH0730,2025-03-12,Call,Đổi trả,Resolved,5.0
+T0331,PH0221,15/06/2023,Email,,Pending,
+T0332,PH0001,2021-09-26,Call,Chất lượng,Resolved,4.0
+T0333,PH0745,27/08/2021,Zalo,Đổi trả,Resolved,4.0
+T0334,PH0533,14/06/2021,Call,,Pending,
+T0335,PH0055,06/10/2025,Email,Đổi trả,Pending,
+T0336,PH0539,2025-03-31,,Sai hàng,Pending,
+T0337,PH0226,2024-02-09,Email,Sai hàng,Resolved,4.0
+T0338,PH0271,2025-02-24,Call,Giao trễ,Resolved,3.0
+T0339,PH0257,2024-08-23,Call,Đổi trả,Resolved,5.0
+T0340,PH0005,30/05/2025,Call,Sai hàng,Resolved,2.0
+T0341,PH0475,2025-11-23,Email,Sai hàng,Resolved,2.0
+T0342,PH0479,2025-01-19,Email,Chất lượng,Resolved,4.0
+T0343,PH0789,2021-05-13,Zalo,Giao trễ,Escalated,
+T0344,PH0604,15/03/2025,Call,Đổi trả,Escalated,
+T0345,PH0519,2025-07-08,Sales rep,Giao trễ,Escalated,
+T0346,PH0085,2024-04-28,Call,Chất lượng,Resolved,2.0
+T0347,PH0032,2024-09-09,Email,Chất lượng,Resolved,5.0
+T0348,PH0416,2024-07-14,Call,,Resolved,2.0
+T0349,PH0280,2025-08-29,Call,Đổi trả,Resolved,1.0
+T0350,PH0670,2021-06-12,Zalo,Công nợ,Escalated,
+T0351,PH0739,2023-09-27,Zalo,Sai hàng,Pending,2.0
+T0352,PH0019,2024-09-20,Email,Sai hàng,Resolved,2.0
+T0353,PH0667,2022-06-13,Call,Đổi trả,Resolved,4.0
+T0354,PH0565,2024-12-01,Call,Công nợ,Resolved,1.0
+T0355,PH0344,07-27-2020,Email,Giao trễ,Resolved,1.0
+T0356,PH0195,2025-04-03,Sales rep,Đổi trả,Pending,
+T0357,PH0589,2025-12-10,Zalo,Chất lượng,Pending,
+T0358,PH0095,2023-05-28,Sales rep,Đổi trả,Resolved,2.0
+T0359,PH0054,2025-01-25,Sales rep,Chất lượng,Resolved,4.0
+T0360,PH0457,2025-01-01,Sales rep,Sai hàng,Pending,
+T0361,PH0402,2025-11-06,Call,Sai hàng,Resolved,4.0
+T0362,PH0636,05-31-2025,Zalo,Sai hàng,Pending,
+T0363,PH0022,2023-05-06,Zalo,Chất lượng,Resolved,
+T0364,PH0715,08/10/2025,Zalo,Đổi trả,Resolved,4.0
+T0365,PH0559,2025-11-07,Call,Sai hàng,Resolved,4.0
+T0366,PH0085,2024-03-11,Sales rep,,Pending,
+T0367,PH0061,11-04-2025,Call,Sai hàng,Resolved,5.0
+T0368,PH0800,2024-01-04,Email,Chất lượng,Escalated,
+T0369,PH0243,2025-11-22,Email,Chất lượng,Resolved,1.0
+T0370,PH0415,11/11/2021,Sales rep,Giao trễ,Resolved,3.0
+T0371,PH0476,2025-09-12,Zalo,Đổi trả,Pending,1.0
+T0372,PH0706,07-08-2025,Call,Sai hàng,Escalated,
+T0373,PH0743,2022-03-27,Zalo,Chất lượng,Resolved,3.0
+T0374,PH0017,20/03/2024,Zalo,,Pending,
+T0375,PH0376,2025-08-31,Zalo,Đổi trả,Resolved,1.0
+T0376,PH0584,2025-12-28,Zalo,Công nợ,Resolved,4.0
+T0377,PH0111,2022-11-14,Email,Công nợ,Resolved,1.0
+T0378,PH0789,2025-11-17,Email,Sai hàng,Resolved,5.0
+T0379,PH0194,2025-10-17,Sales rep,Giao trễ,Resolved,4.0
+T0380,PH0010,2024-08-31,Sales rep,Sai hàng,Escalated,
+T0381,PH0408,10-01-2025,Email,Công nợ,Resolved,3.0
+T0382,PH0087,2025-10-28,Zalo,Giao trễ,Resolved,3.0
+T0383,PH0570,2022-07-13,Sales rep,Đổi trả,Escalated,
+T0384,PH0683,2023-09-15,Email,Sai hàng,Resolved,5.0
+T0385,PH0240,2023-08-24,Zalo,Công nợ,Resolved,2.0
+T0386,PH0375,11/01/2025,,Giao trễ,Resolved,3.0
+T0387,PH0713,2022-10-23,Sales rep,Giao trễ,Resolved,1.0
+T0388,PH0326,06/01/2023,Sales rep,Đổi trả,Resolved,5.0
+T0389,PH0143,2023-03-14,Call,Đổi trả,Resolved,4.0
+T0390,PH0295,23/07/2024,Call,Công nợ,Resolved,3.0
+T0391,PH0377,2024-03-18,Sales rep,Giao trễ,Escalated,
+T0392,PH0063,2022-09-16,Sales rep,Giao trễ,Resolved,
+T0393,PH0738,2025-10-13,Sales rep,Sai hàng,Escalated,
+T0394,PH0038,2024-10-01,Call,Chất lượng,Resolved,5.0
+T0395,PH0443,2025-12-11,Email,Chất lượng,Resolved,5.0
+T0396,PH0536,11-09-2025,,Đổi trả,Escalated,
+T0397,PH0749,2025-07-09,Call,Giao trễ,Resolved,2.0
+T0398,PH0623,2023-10-14,Sales rep,Sai hàng,Resolved,4.0
+T0399,PH0154,2025-08-19,Email,Đổi trả,Resolved,1.0
+T0400,PH0282,2024-02-24,Email,Công nợ,Pending,
+T0401,PH0747,2023-02-11,Call,Sai hàng,Resolved,1.0
+T0402,PH0067,2025-07-03,Zalo,Công nợ,Pending,
+T0403,PH0175,2023-01-15,Zalo,Công nợ,Escalated,
+T0404,PH0517,2025-11-18,Sales rep,Chất lượng,Resolved,3.0
+T0405,PH0380,2024-01-08,Zalo,Công nợ,Pending,
+T0406,PH0108,2025-06-29,Sales rep,Sai hàng,Resolved,3.0
+T0407,PH0501,2024-09-03,Zalo,Chất lượng,Pending,
+T0408,PH0799,04/10/2025,Sales rep,Công nợ,Resolved,2.0
+T0409,PH0381,20/07/2025,Call,Đổi trả,Resolved,5.0
+T0410,PH0194,2025-06-14,Email,Chất lượng,Resolved,4.0
+T0411,PH0226,2023-11-26,Sales rep,Sai hàng,Resolved,2.0
+T0412,PH0382,2025-10-11,Email,Chất lượng,Resolved,1.0
+T0413,PH0193,12-04-2024,Call,Sai hàng,Pending,
+T0414,PH0046,2021-04-05,Email,Giao trễ,Resolved,4.0
+T0415,PH0018,2023-06-28,Call,Giao trễ,Resolved,5.0
+T0416,PH0123,2025-09-13,Zalo,Công nợ,Resolved,4.0
+T0417,PH0286,28/12/2025,Zalo,Giao trễ,Resolved,1.0
+T0418,PH0778,2021-05-24,Sales rep,Giao trễ,Resolved,2.0
+T0419,PH0762,2024-10-31,Call,Công nợ,Resolved,1.0
+T0420,PH0196,2022-10-21,Email,Giao trễ,Resolved,3.0
+T0421,PH0074,2025-08-19,Sales rep,Giao trễ,Resolved,4.0
+T0422,PH0651,2025-11-28,Call,Đổi trả,Resolved,2.0
+T0423,PH0422,10-17-2023,Call,Đổi trả,Resolved,3.0
+T0424,PH0399,2024-09-01,Zalo,Giao trễ,Resolved,4.0
+T0425,PH0406,23/02/2025,Sales rep,Công nợ,Escalated,
+T0426,PH0543,2025-04-20,Email,Chất lượng,Resolved,4.0
+T0427,PH0565,2020-12-12,Call,Đổi trả,Pending,
+T0428,PH0057,2023-12-15,Call,Đổi trả,Resolved,3.0
+T0429,PH0337,2025-02-22,Call,Công nợ,Resolved,4.0
+T0430,PH0682,2025-05-18,Sales rep,Sai hàng,Resolved,3.0
+T0431,PH0593,2024-07-25,Zalo,Công nợ,Resolved,1.0
+T0432,PH0208,03/02/2021,Zalo,Đổi trả,Resolved,4.0
+T0433,PH0126,2025-11-09,Sales rep,Sai hàng,Resolved,4.0
+T0434,PH0766,2025-08-15,Email,Đổi trả,Resolved,
+T0435,PH0653,03/01/2025,Sales rep,Chất lượng,Pending,
+T0436,PH0626,2025-08-28,Zalo,Giao trễ,Resolved,3.0
+T0437,PH0280,2022-09-05,Call,Công nợ,Pending,
+T0438,PH0437,2021-02-02,Zalo,Giao trễ,Resolved,1.0
+T0439,PH0476,2024-11-06,Sales rep,Sai hàng,Resolved,5.0
+T0440,PH0629,2025-04-18,Sales rep,Công nợ,Resolved,5.0
+T0441,PH0509,2024-10-03,Email,Chất lượng,Resolved,5.0
+T0442,PH0698,2025-08-20,Zalo,Đổi trả,Resolved,5.0
+T0443,PH0407,2021-07-27,Sales rep,Công nợ,Resolved,1.0
+T0444,PH0703,2025-08-06,Call,Giao trễ,Pending,
+T0445,PH0508,2025-11-14,Email,Sai hàng,Resolved,3.0
+T0446,PH0599,2022-07-18,Zalo,Đổi trả,Pending,
+T0447,PH0717,2025-06-19,Call,Đổi trả,Resolved,4.0
+T0448,PH0604,01/08/2024,Zalo,Giao trễ,Resolved,5.0
+T0449,PH0565,2021-04-07,Email,Chất lượng,Resolved,2.0
+T0450,PH0403,2025-09-12,Sales rep,Chất lượng,Pending,
+T0451,PH0762,2025-08-06,Sales rep,Giao trễ,Resolved,3.0
+T0452,PH0564,2024-08-28,Email,Công nợ,Resolved,4.0
+T0453,PH0703,2025-07-27,Call,Công nợ,Resolved,5.0
+T0454,PH0022,2023-01-29,Zalo,Chất lượng,Resolved,4.0
+T0455,PH0476,2025-12-04,Call,Sai hàng,Resolved,4.0
+T0456,PH0004,2024-09-04,Sales rep,Đổi trả,Pending,
+T0457,PH0291,2025-10-29,,Chất lượng,Pending,
+T0458,PH0027,2024-12-29,Email,Công nợ,Resolved,2.0
+T0459,PH0705,26/11/2025,Sales rep,Sai hàng,Resolved,2.0
+T0460,PH0134,2025-12-06,Email,Sai hàng,Resolved,1.0
+T0461,PH0580,23/02/2022,Call,Đổi trả,Escalated,
+T0462,PH0732,2025-06-20,Call,Chất lượng,Resolved,3.0
+T0463,PH0262,2024-11-01,,Công nợ,Resolved,5.0
+T0464,PH0530,2024-10-04,Call,Sai hàng,Resolved,5.0
+T0465,PH0513,2024-04-27,Email,Đổi trả,Escalated,
+T0466,PH0419,2022-06-23,Email,,Resolved,1.0
+T0467,PH0521,2022-10-07,Email,,Escalated,
+T0468,PH0468,2024-12-04,Zalo,Sai hàng,Pending,3.0
+T0469,PH0436,2025-11-25,Email,Sai hàng,Resolved,3.0
+T0470,PH0228,2025-09-05,Call,Công nợ,Resolved,1.0
+T0471,PH0397,2025-03-09,Call,Đổi trả,Resolved,1.0
+T0472,PH0704,2025-10-17,Pigeon,Chất lượng,Resolved,5.0
+T0473,PH0274,2023-10-23,,Giao trễ,Resolved,5.0
+T0474,PH0290,2025-03-24,Email,Chất lượng,Resolved,4.0
+T0475,PH0334,2025-04-23,Call,Chất lượng,Resolved,5.0
+T0476,PH0479,2024-06-05,Call,Công nợ,Resolved,5.0
+T0477,PH0356,2025-04-12,Zalo,Sai hàng,Pending,
+T0478,PH0550,2025-06-14,Zalo,Công nợ,Resolved,1.0
+T0479,PH0380,2022-08-14,Call,Công nợ,Resolved,4.0
+T0480,PH0513,2023-06-25,Email,Sai hàng,Resolved,1.0
+T0481,PH0028,2023-09-17,Zalo,,Resolved,5.0
+T0482,PH0774,2024-08-24,Zalo,Công nợ,Resolved,4.0
+T0483,PH0459,2025-08-11,Zalo,Đổi trả,Escalated,
+T0484,PH0600,11/09/2023,Email,Công nợ,Pending,
+T0485,PH0700,2024-12-10,Email,Sai hàng,Resolved,1.0
+T0486,PH0499,2022-05-02,Sales rep,Chất lượng,Resolved,4.0
+T0487,PH0505,2023-01-06,Sales rep,Sai hàng,Pending,
+T0488,PH0447,2024-09-22,Email,Sai hàng,Pending,
+T0489,PH0721,2021-10-26,Sales rep,,Pending,
+T0490,PH0077,09-07-2024,Zalo,Giao trễ,Pending,
+T0491,PH0489,2025-02-01,Call,Chất lượng,Pending,
+T0492,PH0150,03-22-2025,Sales rep,Đổi trả,Resolved,3.0
+T0493,PH0305,2024-10-22,Zalo,Giao trễ,Resolved,
+T0494,PH0243,2022-03-18,Call,Sai hàng,Resolved,5.0
+T0495,PH0678,2022-06-27,Email,Đổi trả,Resolved,5.0
+T0496,PH0318,04-02-2024,Sales rep,Công nợ,Resolved,5.0
+T0497,PH0395,29/10/2024,Email,Giao trễ,Resolved,2.0
+T0498,PH0221,2025-08-01,Email,Đổi trả,Resolved,2.0
+T0499,PH0529,04-07-2025,Sales rep,Chất lượng,Resolved,4.0
+T0500,PH0647,2024-06-20,Sales rep,Công nợ,Resolved,
+T0501,PH0725,2024-05-16,Sales rep,Chất lượng,Resolved,3.0
+T0502,PH0436,2024-06-08,Email,Sai hàng,Resolved,4.0
+T0503,PH0245,2025-11-19,Sales rep,Giao trễ,Resolved,3.0
+T0504,PH0763,06/03/2025,Sales rep,Chất lượng,Resolved,2.0
+T0505,PH0580,2023-04-07,Email,Công nợ,Escalated,
+T0506,PH0314,2025-03-27,Zalo,Sai hàng,Resolved,
+T0507,PH0598,2024-08-13,Email,Công nợ,Pending,3.0
+T0508,PH0195,2025-10-20,Email,Sai hàng,Resolved,3.0
+T0509,PH0604,2023-12-31,Zalo,Sai hàng,Escalated,
+T0510,PH0027,2024-11-21,Email,Đổi trả,Escalated,
+T0511,PH0531,03-28-2025,Sales rep,Giao trễ,Resolved,5.0
+T0512,PH0770,2022-12-03,Email,Công nợ,Pending,3.0
+T0513,PH0602,2025-03-13,Sales rep,Công nợ,Resolved,1.0
+T0514,PH0351,2024-10-22,Call,Công nợ,Resolved,1.0
+T0515,PH0651,2022-12-23,Email,,Resolved,4.0
+T0516,PH0712,2025-02-04,Zalo,Đổi trả,Resolved,
+T0517,PH0640,2025-01-02,Zalo,Giao trễ,Resolved,4.0
+T0518,PH0685,2025-05-13,Email,Giao trễ,Resolved,2.0
+T0519,PH0752,2024-12-02,Call,Đổi trả,Pending,
+T0520,PH0368,06/10/2025,Email,Đổi trả,Resolved,4.0
+T0521,PH0630,2023-06-01,Email,Công nợ,Resolved,5.0
+T0522,PH0698,2025-12-20,,Chất lượng,Pending,
+T0523,PH0268,2025-06-21,Pigeon,Công nợ,Resolved,4.0
+T0524,PH0568,2024-02-24,Call,Sai hàng,Escalated,
+T0525,PH0220,2025-07-17,Email,Đổi trả,Pending,
+T0526,PH0232,2025-01-20,Call,Sai hàng,Resolved,
+T0527,PH0600,2023-02-19,Sales rep,Đổi trả,Resolved,4.0
+T0528,PH0599,17/04/2021,Call,Đổi trả,Resolved,3.0
+T0529,PH0474,2024-07-04,Sales rep,Chất lượng,Resolved,4.0
+T0530,PH0511,2025-09-11,Call,Giao trễ,Resolved,2.0
+T0531,PH0412,2024-05-06,Email,Giao trễ,Resolved,1.0
+T0532,PH0109,2020-07-09,Zalo,Công nợ,Escalated,
+T0533,PH0231,2024-10-08,Pigeon,Công nợ,Resolved,3.0
+T0534,PH0708,2025-11-10,Zalo,,Resolved,5.0
+T0535,PH0369,2025-11-24,Zalo,Chất lượng,Resolved,4.0
+T0536,PH0455,2025-10-16,,Sai hàng,Resolved,4.0
+T0537,PH0400,2022-08-30,Email,Sai hàng,Resolved,1.0
+T0538,PH0410,2025-10-16,Call,Chất lượng,Pending,
+T0539,PH0524,2023-10-26,Zalo,Công nợ,Resolved,5.0
+T0540,PH0515,2025-08-02,Sales rep,Công nợ,Resolved,4.0
+T0541,PH0205,24/03/2025,Sales rep,Sai hàng,Resolved,3.0
+T0542,PH0375,2025-11-27,,Sai hàng,Resolved,4.0
+T0543,PH0793,2024-01-03,Email,Công nợ,Resolved,1.0
+T0544,PH0064,2024-11-23,,Giao trễ,Resolved,4.0
+T0545,PH0494,2024-10-05,Call,Giao trễ,Resolved,3.0
+T0546,PH0222,2022-08-15,Sales rep,Công nợ,Resolved,3.0
+T0547,PH0696,2023-08-09,Pigeon,,Resolved,5.0
+T0548,PH0064,2023-08-05,Call,Giao trễ,Resolved,4.0
+T0549,PH0416,2025-01-13,Sales rep,Chất lượng,Resolved,1.0
+T0550,PH0619,2021-05-02,Call,Sai hàng,Resolved,5.0
+T0551,PH0561,2025-07-08,Sales rep,Sai hàng,Resolved,5.0
+T0552,PH0465,2024-05-29,Call,Giao trễ,Resolved,1.0
+T0553,PH0198,2023-10-06,Call,Công nợ,Resolved,3.0
+T0554,PH0289,2023-03-27,Zalo,Sai hàng,Resolved,2.0
+T0555,PH0212,24/08/2025,Zalo,Đổi trả,Resolved,4.0
+T0556,PH0233,10/01/2025,Call,Chất lượng,Resolved,5.0
+T0557,PH0450,09-11-2022,Call,Đổi trả,Resolved,2.0
+T0558,PH0688,2024-03-15,Zalo,Giao trễ,Resolved,1.0
+T0559,PH0577,22/12/2025,Zalo,Chất lượng,Resolved,2.0
+T0560,PH0410,2024-09-08,Zalo,Giao trễ,Resolved,0.0
+T0561,PH0322,01-29-2022,Call,Sai hàng,Resolved,1.0
+T0562,PH0068,2023-12-09,Call,Sai hàng,Pending,
+T0563,PH0566,2022-07-25,Sales rep,Công nợ,Resolved,1.0
+T0564,PH0560,2023-10-31,Zalo,Giao trễ,Escalated,
+T0565,PH0090,2022-08-09,Email,Công nợ,Pending,
+T0566,PH0327,2025-04-09,,Công nợ,Resolved,2.0
+T0567,PH0379,2025-08-07,Zalo,Công nợ,Resolved,3.0
+T0568,PH0359,2024-01-13,Zalo,Giao trễ,Escalated,
+T0569,PH0704,2025-10-10,Sales rep,Đổi trả,Resolved,5.0
+T0570,PH0055,2025-11-25,Zalo,Công nợ,Pending,3.0
+T0571,PH0273,2022-09-21,Call,Giao trễ,Resolved,1.0
+T0572,PH0366,2025-11-25,Sales rep,Giao trễ,Pending,
+T0573,PH0208,2021-04-28,Email,Chất lượng,Pending,
+T0574,PH0304,2025-09-16,Email,Giao trễ,Resolved,1.0
+T0575,PH0265,2025-10-09,Sales rep,Sai hàng,Pending,
+T0576,PH0196,2024-07-24,Sales rep,Công nợ,Pending,
+T0577,PH0224,06/07/2025,,Chất lượng,Escalated,
+T0578,PH0468,2024-11-28,,Chất lượng,Escalated,
+T0579,PH0661,2025-06-05,Call,Đổi trả,Resolved,3.0
+T0580,PH0564,2025-11-23,Sales rep,Công nợ,Escalated,
+T0581,PH0084,2025-06-18,Zalo,Giao trễ,Resolved,3.0
+T0582,PH0326,2022-08-22,,Đổi trả,Resolved,4.0
+T0583,PH0557,2024-01-08,Zalo,Chất lượng,Pending,
+T0584,PH0628,2025-10-01,Sales rep,Chất lượng,Escalated,
+T0585,PH0731,10-30-2024,Sales rep,Đổi trả,Resolved,1.0
+T0586,PH0016,2025-09-02,Email,Chất lượng,Resolved,1.0
+T0587,PH0582,2020-03-17,,Giao trễ,Escalated,
+T0588,PH0387,2025-08-07,Email,Chất lượng,Resolved,4.0
+T0589,PH0335,10/07/2023,Call,Công nợ,Pending,
+T0590,PH0466,2025-07-09,Sales rep,Giao trễ,Resolved,4.0
+T0591,PH0053,2023-05-15,Zalo,Giao trễ,Resolved,7.0
+T0592,PH0002,2025-06-27,Zalo,Đổi trả,Resolved,1.0
+T0593,PH0098,2023-05-17,Zalo,Chất lượng,Resolved,4.0
+T0594,PH0215,2021-08-08,Sales rep,Công nợ,Resolved,5.0
+T0595,PH0475,2025-12-22,Sales rep,Công nợ,Escalated,
+T0596,PH0475,19/09/2025,Call,Công nợ,Escalated,
+T0597,PH0171,2025-06-11,Zalo,Giao trễ,Resolved,
+T0598,PH0191,2023-06-21,Zalo,Chất lượng,Resolved,1.0
+T0599,PH0573,2024-03-26,Zalo,Đổi trả,Resolved,1.0
+T0600,PH0033,17/03/2025,Email,Sai hàng,Resolved,3.0
+T0601,PH0654,2025-02-03,Pigeon,Giao trễ,Pending,
+T0602,PH0474,2023-08-14,Email,Đổi trả,Pending,4.0
+T0603,PH0745,2022-07-08,Zalo,,Resolved,3.0
+T0604,PH0139,2023-09-25,Call,Đổi trả,Pending,
+T0605,PH0387,21/08/2025,Zalo,Giao trễ,Resolved,3.0
+T0606,PH0338,2024-02-26,Call,Chất lượng,Resolved,4.0
+T0607,PH0513,18/08/2023,Call,Sai hàng,Resolved,4.0
+T0608,PH0021,2025-10-27,Zalo,Công nợ,Resolved,5.0
+T0609,PH0352,2024-06-01,Sales rep,Sai hàng,Resolved,2.0
+T0610,PH0560,2025-04-29,Email,Sai hàng,Pending,
+T0611,PH0222,03/09/2025,Call,Đổi trả,Resolved,4.0
+T0612,PH0255,2024-10-19,Sales rep,Đổi trả,Resolved,1.0
+T0613,PH0217,2025-12-31,Email,Sai hàng,Resolved,1.0
+T0614,PH0341,2022-05-26,Zalo,Đổi trả,Resolved,4.0
+T0615,PH0560,2025-03-29,Zalo,Công nợ,Resolved,4.0
+T0616,PH0627,2025-10-03,Sales rep,Đổi trả,Pending,
+T0617,PH0194,06-02-2025,Sales rep,Giao trễ,Resolved,5.0
+T0618,PH0506,2025-01-02,Call,Giao trễ,Pending,
+T0619,PH0034,2025-09-04,Email,Sai hàng,Resolved,4.0
+T0620,PH0217,2025-07-10,Sales rep,Giao trễ,Resolved,4.0
+T0621,PH0054,2025-08-29,Zalo,Chất lượng,Escalated,
+T0622,PH0509,2024-04-16,Sales rep,Công nợ,Resolved,4.0
+T0623,PH0622,06-18-2025,Call,,Resolved,5.0
+T0624,PH0636,2023-04-02,,Công nợ,Pending,
+T0625,PH0019,11/03/2025,Call,Công nợ,Resolved,1.0
+T0626,PH0784,2024-07-26,Call,Công nợ,Resolved,4.0
+T0627,PH0061,10-02-2025,Email,Đổi trả,Pending,4.0
+T0628,PH0063,2025-07-11,Sales rep,Đổi trả,Resolved,4.0
+T0629,PH0767,2025-10-06,Call,Đổi trả,Pending,
+T0630,PH0565,2022-06-28,Sales rep,Sai hàng,Pending,
+T0631,PH0770,2025-10-14,Sales rep,,Resolved,5.0
+T0632,PH0613,2025-03-24,Email,Sai hàng,Escalated,
+T0633,PH0799,2025-09-25,Sales rep,Sai hàng,Resolved,4.0
+T0634,PH0121,10-16-2025,Email,Sai hàng,Resolved,3.0
+T0635,PH0458,11-18-2025,Zalo,Công nợ,Resolved,5.0
+T0636,PH0506,2023-10-26,Zalo,Giao trễ,Resolved,5.0
+T0637,PH0627,2025-05-22,Call,Sai hàng,Resolved,4.0
+T0638,PH0667,2022-07-12,,,Resolved,3.0
+T0639,PH0028,09-04-2023,Sales rep,Công nợ,Resolved,1.0
+T0640,PH0108,2025-08-01,Call,Chất lượng,Escalated,
+T0641,PH0352,07/03/2022,Call,Đổi trả,Resolved,-1.0
+T0642,PH0686,09/09/2020,Call,Giao trễ,Resolved,1.0
+T0643,PH0697,18/08/2025,Email,Chất lượng,Escalated,
+T0644,PH0780,2022-10-18,Call,Đổi trả,Resolved,1.0
+T0645,PH0509,2023-09-28,Zalo,Giao trễ,Resolved,1.0
+T0646,PH0269,2025-06-05,Email,Giao trễ,Escalated,
+T0647,PH0192,2025-01-12,Sales rep,Sai hàng,Pending,
+T0648,PH0254,12-25-2023,Zalo,Sai hàng,Resolved,2.0
+T0649,PH0308,2025-12-23,Call,Sai hàng,Resolved,5.0
+T0650,PH0450,20/10/2023,Sales rep,Công nợ,Resolved,2.0
+T0651,PH0546,2021-09-22,Call,Công nợ,Resolved,2.0
+T0652,PH0387,06-19-2024,Call,Chất lượng,Pending,
+T0653,PH0168,2025-06-27,Zalo,Đổi trả,Pending,
+T0654,PH0699,2025-08-04,Sales rep,Đổi trả,Pending,
+T0655,PH0563,07-25-2022,Call,Đổi trả,Resolved,3.0
+T0656,PH0699,01-11-2023,Sales rep,Chất lượng,Resolved,1.0
+T0657,PH0011,2025-08-03,Email,Chất lượng,Resolved,5.0
+T0658,PH0556,2025-01-22,Zalo,Đổi trả,Pending,4.0
+T0659,PH0444,2022-03-05,Sales rep,Đổi trả,Resolved,4.0
+T0660,PH0775,22/12/2025,Sales rep,Đổi trả,Resolved,1.0
+T0661,PH0553,2024-03-12,Zalo,,Resolved,4.0
+T0662,PH0270,2024-11-14,Call,Đổi trả,Resolved,4.0
+T0663,PH0411,2025-05-17,Call,Công nợ,Resolved,2.0
+T0664,PH0439,2024-08-01,Call,Giao trễ,Resolved,3.0
+T0665,PH0367,2025-12-09,,Sai hàng,Pending,1.0
+T0666,PH0582,2021-07-21,Email,Giao trễ,Resolved,1.0
+T0667,PH0635,2024-03-11,Email,,Resolved,5.0
+T0668,PH0028,12/05/2024,Sales rep,Đổi trả,Resolved,5.0
+T0669,PH0073,03-30-2024,Sales rep,Đổi trả,Resolved,1.0
+T0670,PH0377,2023-07-08,Email,Sai hàng,Resolved,1.0
+T0671,PH0461,2023-11-08,Zalo,Sai hàng,Pending,
+T0672,PH0292,2025-05-01,Zalo,,Resolved,1.0
+T0673,PH0077,2024-04-03,Zalo,Giao trễ,Resolved,2.0
+T0674,PH0021,2024-10-30,Email,Sai hàng,Resolved,3.0
+T0675,PH0314,2025-02-24,Call,,Pending,3.0
+T0676,PH0797,2023-10-18,Sales rep,Sai hàng,Escalated,
+T0677,PH0521,08/05/2022,Zalo,Giao trễ,Resolved,2.0
+T0678,PH0492,2025-06-06,Sales rep,Đổi trả,Resolved,2.0
+T0679,PH0648,2022-09-02,Email,Đổi trả,Resolved,4.0
+T0680,PH0346,2024-06-30,Email,Đổi trả,Resolved,4.0
+T0681,PH0305,2025-06-24,Email,Sai hàng,Resolved,1.0
+T0682,PH0404,2025-08-11,Email,Giao trễ,Pending,
+T0683,PH0440,2023-08-28,Zalo,Chất lượng,Resolved,4.0
+T0684,PH0145,2025-06-26,Email,Sai hàng,Pending,
+T0685,PH0417,2023-05-26,Zalo,,Pending,
+T0686,PH0037,2023-08-05,Call,Sai hàng,Escalated,
+T0687,PH0060,2025-03-14,Sales rep,Chất lượng,Resolved,4.0
+T0688,PH0091,2024-10-18,Zalo,Chất lượng,Resolved,1.0
+T0689,PH0241,2025-03-15,Sales rep,Giao trễ,Pending,
+T0690,PH0791,10-30-2025,Email,Chất lượng,Pending,
+T0691,PH0068,30/08/2025,Call,,Resolved,4.0
+T0692,PH0338,13/10/2022,Email,Công nợ,Pending,
+T0693,PH0365,2023-12-26,Zalo,Đổi trả,Pending,
+T0694,PH0769,2025-09-21,Zalo,Công nợ,Resolved,2.0
+T0695,PH0377,2024-03-17,Zalo,Sai hàng,Pending,
+T0696,PH0245,2025-12-16,Call,Công nợ,Resolved,3.0
+T0697,PH0599,2023-11-12,Sales rep,Chất lượng,Resolved,1.0
+T0698,PH0518,2024-03-01,Zalo,Chất lượng,Resolved,5.0
+T0699,PH0539,02/02/2025,Zalo,Chất lượng,Pending,
+T0700,PH0630,21/08/2025,Email,Công nợ,Pending,

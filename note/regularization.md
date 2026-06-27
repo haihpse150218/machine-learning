@@ -31,6 +31,7 @@ Chi phí mới = Loss (sai số gốc)  +  λ · Penalty(trọng số)
 | **λ quá nhỏ** | phạt yếu → **vẫn quá khớp** |
 | **λ vừa** | cân bằng → tổng quát tốt |
 > Chọn λ bằng **cross-validation** (`RidgeCV`, `LassoCV`) để cân bằng **bias–variance** ([[overfitting]]). λ là **siêu tham số**, không học từ dữ liệu.
+> 🔧 **Chỉnh thực hành:** đang **overfit → TĂNG λ** (phạt mạnh, model đơn giản hơn); đang **underfit / phạt quá tay → GIẢM λ**. λ = "núm độ phức tạp **đảo ngược**" — λ nhỏ = phức tạp (variance), λ lớn = đơn giản (bias), λ vừa = đáy chữ U ([[bias-variance]]).
 > ⚠️ **θ₀ (bias/intercept) KHÔNG bị phạt** — chỉ phạt θ₁…θₙ.
 
 ## 🔵 Ridge (L2) — phạt tổng bình phương hệ số
@@ -44,6 +45,8 @@ J(θ) = (1/2m) [ Σ (hθ(xᵢ) − yᵢ)²  +  λ Σ θⱼ² ]
         └── hệ số co < 1 ──┘   └──── gradient gốc ────┘
 ```
 > Thừa số `(1 − αλ/m) < 1` chính là **weight decay**: mỗi bước **co nhỏ** trọng số một chút TRƯỚC khi cập nhật theo gradient. (So với bản thường: chỉ thêm thừa số co; θ₀ vẫn cập nhật như cũ.)
+> 🧠 *Trực giác:* trọng số nào **gradient đẩy đủ mạnh** (đặc trưng quan trọng) thì sống sót lớn; trọng số **vô dụng** bị decay dần về ~0 → L2 tự lọc độ phức tạp.
+> ⚠️ **Đừng nhầm 2 loại "decay":** **Weight decay** (đây) = co **trọng số θ** do phạt L2 · **Learning-rate decay** = co **tốc độ học α** theo lịch thời gian (vd notebook softmax). Cùng tên, khác mục tiêu.
 
 ## 🔶 Lasso (L1) — phạt tổng trị tuyệt đối → CHỌN BIẾN
 ```
@@ -53,9 +56,10 @@ J(θ) = (1/2m) Σ (hθ(xᵢ) − yᵢ)²  +  λ Σ |θⱼ|
 - L1 đẩy **nhiều hệ số về ĐÚNG 0** → đặc trưng tương ứng **bị loại tự động** → vừa regularize vừa **chọn biến** (cầu sang [[feature-selection]] hướng embedded).
 
 ### 🔷 Vì sao L1 tạo số 0 còn L2 thì không? (hình học)
+> 🔑 **"L1/L2" = chuẩn 1 / chuẩn 2 (norm)** — hai cách đo độ lớn: **L1 = Σ|θ| (khoảng cách Manhattan, trị tuyệt đối)** · **L2 = Σθ² (khoảng cách Euclidean, bình phương)**. Hình ràng buộc chính là **quả cầu đơn vị** của mỗi chuẩn:
 > Nghiệm = nơi đường đồng mức của Loss **chạm** vùng ràng buộc của penalty:
 - **Ridge (L2) = hình TRÒN** (Σθ² ≤ t) → Loss thường chạm ở **cạnh cong** → θ nhỏ nhưng **hiếm khi = 0**.
-- **Lasso (L1) = hình KIM CƯƠNG** (Σ|θ| ≤ t) → có **góc nhọn nằm trên trục** → Loss hay chạm đúng **góc** → một số θ = **0** (thưa).
+- **Lasso (L1) = hình KIM CƯƠNG** (Σ|θ| ≤ t) → có **góc nhọn nằm trên trục** → Loss hay chạm đúng **góc** → một số θ = **0** (thưa). *Đây là lý do hình học vì sao Lasso chọn biến.*
 - **Elastic Net = kim cương BO TRÒN** (kết hợp).
 
 ## 🟣 Elastic Net (L1 + L2) — kết hợp
@@ -93,6 +97,17 @@ ElasticNet(alpha=0.1, l1_ratio=0.5).fit(X, y)   # l1_ratio = α
 LassoCV(cv=5).fit(X, y).alpha_    # tự dò λ tốt nhất bằng cross-validation
 ```
 
+### 🔗 Bản đồ ký hiệu → sklearn
+| Lý thuyết | sklearn |
+|---|---|
+| **λ** mức phạt | **`Ridge(alpha=)`** — alpha lớn = phạt mạnh; `alpha=0` = OLS |
+| θ₀ không phạt | `fit_intercept=True` (Ridge tự không phạt intercept) |
+| θ₁…θₙ / θ₀ | `coef_` / `intercept_` |
+| chọn λ bằng CV | `RidgeCV(alphas=[...])` · `LassoCV(cv=5)` |
+| Normal Eq vs GD | `solver='cholesky'/'svd'` (đóng) vs `'sag'/'saga'/'lsqr'` (lặp) |
+
+> ⚠️ **Bẫy `C` ngược hướng:** `LogisticRegression`/`SVM` chỉnh regularization bằng **`C = 1/λ`** → **`C` NHỎ = phạt MẠNH** (ngược với `alpha` của Ridge). Nhớ: Ridge→alpha (thuận), Logistic/SVM→C (nghịch).
+
 ## ⚠️ Lỗi thường gặp / Điều dễ nhầm
 - **Quên scale đặc trưng trước khi regularize:** phạt theo độ lớn θ → cột thang đo lớn bị phạt oan → phải [[chuan-hoa-du-lieu]] trước.
 - **λ quá lớn → underfit** (đường ngang); **λ quá nhỏ → vẫn overfit**.
@@ -114,3 +129,4 @@ LassoCV(cv=5).fit(X, y).alpha_    # tự dò λ tốt nhất bằng cross-valida
 ## 📚 Nguồn
 - Slide môn học — TS. Cao Tiến Dũng (`L5_Regularization_FeatureSelection.pdf` Phần 03).
 - StatQuest — "Ridge, Lasso and Elastic-Net Regression".
+- scikit-learn docs: [Ridge](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html) (chuẩn 2/L2) · [Lasso](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html) (chuẩn 1/L1) · [ElasticNet](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ElasticNet.html) (`l1_ratio` = α).
